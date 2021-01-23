@@ -153,6 +153,8 @@ dl, dd {
 .text {
 	font-size: 1.6rem;
 	line-height: 2.4rem;
+	/* letter-spacing: -80px; */
+	transition: letter-spacing 1s;
 }
 
 .text--alternate1 {
