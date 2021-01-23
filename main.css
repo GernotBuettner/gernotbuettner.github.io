@@ -117,7 +117,6 @@ dl, dd {
 
 
 .main__container {
-	width: 100%;
 	border-left: black solid 1px;
 	padding-left: var(--base1);
 	padding-right: var(--base1);
