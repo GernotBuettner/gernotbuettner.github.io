@@ -191,6 +191,10 @@ dl, dd {
 	line-height: 2.0rem;
 }
 
+.link + .text--detailAlternate {
+	color: grey;
+}
+
 
 .link {
 	pointer-events: all;
@@ -209,9 +213,6 @@ dl, dd {
 	margin-top: var(--baseHalf);
 }
 
-.detailList--nav {
-	/* margin-top: var(--base1); */
-}
 
 .detailList__item {
 	list-style-type: none;
@@ -222,8 +223,6 @@ dl, dd {
 	margin-right: var(--base1);
 }
 
-.section--cv {
-}
 
 .section--cv .detailList__item:not(:last-of-type) .text::after {
 	content: '>';
@@ -269,7 +268,7 @@ dl, dd {
 	line-height: 2.4rem;
 }
 
-@media print, (min-width: 768px) {
+@media (min-width: 768px) {
 	.section--person {
 		position: sticky;
 		top: var(--base4);
@@ -300,7 +299,7 @@ dl, dd {
 	}
 
 	.text--highlight {
-		font-size: 4.8rem;
+		font-size: 4.3rem;
 		line-height: 6.2rem;
 	}
 
@@ -331,3 +330,95 @@ dl, dd {
 		margin-top: var(--baseHalf);
 	}
 }
+
+@media print {
+
+	.body {
+		page-break-after: avoid;
+		page-break-before: avoid;
+	}
+
+
+	.section--cv {
+		display: block;
+		page-break-before: avoid;
+		page-break-after: auto;
+		page-break-inside: avoid;
+	}
+
+	.section--person {
+		position: static;
+		page-break-before: avoid;
+		page-break-after: auto;
+	}
+
+	.main__container {
+		border-left: none;
+	}
+
+
+	.text,
+	.text--alternate1,
+	.text--alterante2,
+	.section .detailList__item:not(:last-of-type)::after,
+	.list__item {
+		font-size: 9pt;
+		line-height: 15pt;
+	}
+
+	.text--highlight {
+		font-size: 29pt;
+		line-height: 41pt;
+	}
+
+	.text--highlightAlternate {
+		font-size: 18pt;
+		line-height: 20pt;
+	}
+
+	.text--detail,
+	.text--detailAlternate {
+		font-size: 9pt;
+		line-height: 15pt;
+	}
+
+
+
+	.experience {
+		margin-left: var(--base2);
+	}
+
+	.experience  + .experience {
+		margin-top: 7.5pt;
+		padding-top: 7.5pt;
+		border-top: solid black 0.75pt;
+	}
+
+	.experience__intro + .experience__content {
+		margin-top: 15pt;
+	}
+
+	.experience__footer {
+		margin-top: 15pt;
+	}
+
+	.experienceList__detail + .experienceList__term {
+		margin-top: 10pt;
+	}
+
+	.detailList__item:not(:last-of-type) {
+		margin-right: 5pt;
+	}
+
+	.section--cv .detailList__item:not(:last-of-type) .text::after {
+		content: '>';
+		display: inline-block;
+		margin-left: 5pt;
+		font-size: 9pt;
+		line-height: 15pt;
+	}
+
+
+
+}
+
