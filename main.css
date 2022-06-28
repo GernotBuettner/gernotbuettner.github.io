@@ -207,6 +207,7 @@ dl, dd {
 .detailList {
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: column;
 }
 
 .text--highlightAlternate + .detailList {
@@ -222,15 +223,6 @@ dl, dd {
 
 .detailList__item:not(:last-of-type) {
 	margin-right: var(--base1);
-}
-
-
-.section--cv .detailList__item:not(:last-of-type) .text::after {
-	content: '|';
-	display: inline-block;
-	margin-left: var(--base1);
-	font-size: 2rem;
-	line-height: 2.8rem;
 }
 
 .experience {
@@ -336,12 +328,24 @@ dl, dd {
 		margin-right: auto;
 	}
 
+	.detailList {
+		flex-direction: row;
+	}
+
 	.detailList--nav {
 		flex-direction: column;
 	}
 
 	.detailList--nav .detailList__item {
 		margin-top: var(--baseHalf);
+	}
+
+	.section--cv .detailList__item:not(:last-of-type) .text::after {
+		content: '|';
+		display: inline-block;
+		margin-left: var(--base1);
+		font-size: 2rem;
+		line-height: 2.8rem;
 	}
 }
 
@@ -396,17 +400,40 @@ dl, dd {
 		line-height: 15pt;
 	}
 
+	.detailList {
+		flex-direction: row;
+	}
 
+	.detailList + .text {
+		margin-top: 5pt;
+	}
 
 	.experience {
 		margin-left: var(--base2);
 	}
 
 	.experience  + .experience {
-		margin-top: 7.5pt;
-		padding-top: 7.5pt;
+		margin-top: 30pt;
+		padding-top: 30pt;
 		border-top: solid black 0.75pt;
 	}
+
+	.section--music .experience  + .experience,
+	.section--education .experience + .experience {
+		margin-top: 10pt;
+		padding-top: 10pt;
+		border-top: solid black 0.75pt;
+	}
+
+
+	.section + .section {
+		margin-top: 50pt;
+	}
+
+	.section--person + .section--cv  {
+		margin-top: 30pt;
+	}
+
 
 	.experience__intro + .experience__content {
 		margin-top: 15pt;
@@ -425,7 +452,7 @@ dl, dd {
 	}
 
 	.section--cv .detailList__item:not(:last-of-type) .text::after {
-		content: '>';
+		content: '|';
 		display: inline-block;
 		margin-left: 5pt;
 		font-size: 9pt;
