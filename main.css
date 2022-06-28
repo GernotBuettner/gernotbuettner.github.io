@@ -118,8 +118,8 @@ dl, dd {
 
 .main__container {
 	border-left: black solid 1px;
-	padding-left: var(--base1);
-	padding-right: var(--base1);
+	padding-left: var(--base2);
+	padding-right: var(--base2);
 }
 
 .section + .section {
@@ -148,12 +148,12 @@ dl, dd {
 	top: -5rem;
 }
 
-
 .text {
 	font-size: 1.6rem;
 	line-height: 2.4rem;
 	/* letter-spacing: -80px; */
 	transition: letter-spacing 1s;
+	letter-spacing: 1px;
 }
 
 .text--alternate1 {
@@ -210,13 +210,14 @@ dl, dd {
 }
 
 .text--highlightAlternate + .detailList {
-	margin-top: var(--baseHalf);
+	margin-top: var(--base2);
 }
 
 
 .detailList__item {
 	list-style-type: none;
 	display: inline-flex;
+	margin-bottom: var(--base1);
 }
 
 .detailList__item:not(:last-of-type) {
@@ -225,11 +226,11 @@ dl, dd {
 
 
 .section--cv .detailList__item:not(:last-of-type) .text::after {
-	content: '>';
+	content: '|';
 	display: inline-block;
 	margin-left: var(--base1);
-	font-size: 1.6rem;
-	line-height: 2.4rem;
+	font-size: 2rem;
+	line-height: 2.8rem;
 }
 
 .experience {
@@ -237,13 +238,22 @@ dl, dd {
 }
 
 .experience  + .experience {
+	margin-top: var(--base6);
+	padding-top: var(--base6);
+	border-top: solid grey 1px;
+}
+
+.section--music .experience  + .experience {
 	margin-top: var(--base2);
 	padding-top: var(--base2);
-	border-top: solid black 1px;
 }
 
 .experience__detail {
 	display: flex;
+}
+
+.experience__detail + .experience__intro {
+	margin-top: var(--baseHalf);
 }
 
 .experience__detail .text + .link,
@@ -252,7 +262,7 @@ dl, dd {
 }
 
 .experience__intro + .experience__content {
-	margin-top: var(--base3);
+	margin-top: var(--base4);
 }
 
 .experience__footer {
@@ -260,7 +270,11 @@ dl, dd {
 }
 
 .experienceList__detail + .experienceList__term {
-	margin-top: var(--base2);
+	margin-top: var(--base4);
+}
+
+.experienceList__term + .experienceList__detail {
+	margin-top: var(--baseHalf);
 }
 
 .list__item {
@@ -316,8 +330,8 @@ dl, dd {
 
 	.main__container {
 		max-width: 120rem;
-		padding-left: var(--base2);
-		padding-right: var(--base2);
+		padding-left: var(--base4);
+		padding-right: var(--base4);
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -417,8 +431,5 @@ dl, dd {
 		font-size: 9pt;
 		line-height: 15pt;
 	}
-
-
-
 }
 
