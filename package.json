@@ -1,0 +1,30 @@
+{
+  "name": "gernotbuettner.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:11ty": "eleventy --serve",
+    "watch:sass": "sass --no-source-map --watch sass:_site/css",
+    "watch": "npm-run-all build:sass --parallel watch:*",
+    "build:sass": "sass --no-source-map sass:_site/css",
+    "start": "npm-run-all watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GernotBuettner/gernotbuettner.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GernotBuettner/gernotbuettner.github.io/issues"
+  },
+  "homepage": "https://github.com/GernotBuettner/gernotbuettner.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "del": "^7.1.0"
+  }
+}

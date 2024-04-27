@@ -349,6 +349,7 @@ dl, dd {
 	}
 }
 
+/* PRINT STYLES */
 @media print {
 
 	.body {
@@ -459,4 +460,3 @@ dl, dd {
 		line-height: 15pt;
 	}
 }
-
