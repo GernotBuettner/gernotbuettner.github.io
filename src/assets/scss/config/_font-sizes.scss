@@ -1,0 +1,36 @@
+$htmlFontSize: 62.5%;
+
+$weightExtraLight: 200;		// available for: Brando Italic
+$weightLight: 300;			// available for: Brando Italic
+$weightRegular: 400;		// available for: Brando, Brando Italic, WorkSans
+$weightMedium: 500;			// available for: WorkSans
+$weightSemiBold: 600;		// available for: WorkSans
+$weightBold: 700;			// not available
+$weightUltraBold: 800;			// not available
+
+$fontSizes: (
+	teaserHeadline: (
+		font-family: $fontFamilyMain,
+		font-size: pxToRem(36),
+		font-weight: $weightUltraBold,
+		line-height: 1.2,
+		variants: (
+			$smallLayout: (
+				font-size: pxToRem(42),
+				line-height: 1.2
+			)
+		)
+	),
+	base: (
+		font-family: $fontFamilyMain,
+		font-size: pxToRem(16),
+		font-weight: $weightRegular,
+		line-height: 1.2,
+		variants: (
+			$smallLayout: (
+				font-size: pxToRem(18),
+				line-height: 1.2
+			)
+		)
+	),
+);

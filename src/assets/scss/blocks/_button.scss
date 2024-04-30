@@ -1,0 +1,43 @@
+.button {
+	&--mode {
+		@include ease(filter, 1s);
+		filter: blur($baseHalf);
+		cursor: pointer;
+		width: $base3;
+		height: $base3;
+		border-radius: 50%;
+		background-color: var(--base-color);
+		margin-right: $base4;
+
+		&:hover {
+			filter: blur($base2);
+		}
+	}
+
+	&--menu {
+		cursor: pointer;
+		position: relative;
+		width: $base4;
+		height: $base4;
+
+		&::after {
+			content: '';
+			background-color: var(--base-color);
+			width: 100%;
+			height: $menuBarHeight;
+			position: absolute;
+			top: $base1;
+			left: 0;
+		}
+
+		&::before {
+			content: '';
+			background-color: var(--base-color);
+			width: 100%;
+			height: $menuBarHeight;
+			position: absolute;
+			bottom: $base1;
+			left: 0;
+		}
+	}
+}

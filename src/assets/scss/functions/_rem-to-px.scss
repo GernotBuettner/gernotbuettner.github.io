@@ -1,0 +1,6 @@
+@function remToPx($value, $htmlFontSizePercent: 0.625, $browserDefaultFontSize: 16) {
+	@if (unitless($value) == false) {
+		$value: $value / 1rem;
+	}
+	@return $value * ($browserDefaultFontSize * $htmlFontSizePercent) * 1px;
+}

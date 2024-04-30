@@ -1,0 +1,24 @@
+$black: #000000;
+$nero: #262626;
+$white: #ffffff;
+$beluga: #f1f1f1;
+$platinumGranite: #817e7e;
+
+
+/* VARIABLES */
+:root {
+	--base-background-color: #{$black};
+	--base-color: #{$white};
+	--base-text-color: #{$beluga};
+	--border-color: #{$platinumGranite};
+
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--base-background-color: #{$white};
+		--base-color: #{$black};
+		--base-text-color: #{$nero};
+		--border-color: #{$platinumGranite};
+	}
+}

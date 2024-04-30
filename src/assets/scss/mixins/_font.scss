@@ -1,0 +1,4 @@
+@mixin font($name: base, $map: false) {
+	$map: if($map != false, $map, $fontSizes);
+	@include mediaMap($fontSizes, $name);
+}

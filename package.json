@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "watch:11ty": "eleventy --serve",
-    "watch:sass": "sass --no-source-map --watch src/assets/scss/index.scss:main.css",
+    "watch:sass": "sass --no-source-map --watch src/assets/scss/index.scss:dist/assets/css/main.css",
     "watch": "npm-run-all build:sass --parallel watch:*",
-    "build:sass": "sass --no-source-map src/assets/scss/index.scss:main.css",
+    "build:sass": "sass --no-source-map src/assets/scss/index.scss:dist/assets/css/main.css",
     "start": "npm-run-all watch"
   },
   "repository": {

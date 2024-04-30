@@ -1,6 +1,8 @@
 
 module.exports = function (eleventyConfig) {
-	eleventyConfig.addPassthroughCopy("assets/css/main.css");
+	eleventyConfig.addPassthroughCopy("src/assets/fonts/pp-neue-machina-plain-light.otf");
+	eleventyConfig.addPassthroughCopy("src/assets/fonts/pp-neue-machina-plain-regular.otf");
+	eleventyConfig.addPassthroughCopy("src/assets/fonts/pp-neue-machina-plain-ultra-bold.otf");
 
 	return {
 		dir: {

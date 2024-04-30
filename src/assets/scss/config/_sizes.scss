@@ -1,0 +1,22 @@
+
+/* VARIABLES */
+$baseHalf: 0.5rem;
+$base1: 1rem;
+$base2: 2rem;
+$base3: 3rem;
+$base4: 4rem;
+$base5: 5rem;
+$base6: 6rem;
+$base7: 7rem;
+$base8: 8rem;
+$base9: 9rem;
+
+
+$basicColumns: repeat(7, 1fr);
+
+$layout-max-width: 1600px;
+$layout-grid-columns: 12;
+$layout-margin-gap: $base6;
+$layout-grid-gap: 20px;
+
+$menuBarHeight: pxToRem(4);

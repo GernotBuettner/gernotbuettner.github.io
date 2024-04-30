@@ -45,7 +45,9 @@ dl, dd {
 }
 
 .html {
-	font-size: 62.5%;
+	font-size: $htmlFontSize;
+	background-color: var(--base-background-color);
+	color: var(--base-color);
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
@@ -53,7 +55,7 @@ dl, dd {
 }
 
 .body {
-	font-family: var(--fontFamilyMain);
-	padding: 0;
-	margin: 0;
+	@include font(base);
+	overflow-x: hidden;
+	overflow-y: scroll;
 }

@@ -1,0 +1,20 @@
+@mixin mediaMap($defs, $name, $overrideProperty: false) {
+	$def: map-get($defs, $name);
+	@if ($def) {
+		@each $property, $value in $def {
+			@if ($property == 'variants') {
+				@each $media, $variantDef in $value {
+					@include media($media...) {
+						@each $variantProperty, $variantValue in $variantDef {
+							#{if($overrideProperty, $overrideProperty, $variantProperty)}: #{$variantValue};
+						}
+					}
+				}
+			} @else {
+				#{if($overrideProperty, $overrideProperty, $property)}: #{$value};
+			}
+		}
+	} @else {
+		@debug 'Definition not found in the map: ', $name;
+	}
+}
