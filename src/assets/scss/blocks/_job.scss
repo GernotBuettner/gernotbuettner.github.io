@@ -1,0 +1,14 @@
+.job {
+	&__link {
+		@include headlineBar();
+		color: var(--base-color);
+		display: block;
+		border-top: 0;
+		// position: sticky;
+		// top: $headerHeight;
+	}
+
+	&__headline {
+		@include font(headline);
+	}
+}

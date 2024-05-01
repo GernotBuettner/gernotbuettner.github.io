@@ -1,8 +1,17 @@
 ---
 layout: layouts/base.njk
-title: Gernot Büttner
+title: "Gernot Büttner Web Development & Music"
 ---
 
-{% block content %}
+{% from 'macros/_job.njk' import jobComponent %}
 
+{% block content %}
+	<section class="section section--column">
+		<h2 class="section__title">Experiences</h2>
+		<div class="section__content job">
+			{% for job in jobs %}
+				{{ jobComponent( job ) }}
+			{% endfor %}
+		</div>
+	</section>
 {% endblock %}

@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html class="html" lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="widdh=device-widdh, initial-scale=1.0">
-	<link rel="stylesheet" href="assets/css/main.css">
-	<title>{{ title }}</title>
+	{% include "components/_meta.njk" %}
 </head>
 <body class="body">
 	<main class="main">
-		<header class="header">
-			<div class="header__content">
-				<h1 class="header__headline">Gernot Büttner</h1>
-				<div class="header__buttons">
-					<button class="button button--mode"></button>
-					<button class="button button--menu"></button>
-				</div>
-			</div>
-			<h2 class="header__headline">Web Development & Music</h2>
-		</header>
+		{% include "components/_header.njk" %}
+		<div class="main__intro">
+			<h1 class="main__headline main__headline--name">Gernot Büttner</h1>
+			<h2 class="main__headline">Web Development & Music</h2>
+		</div>
 		<div class="main__content">
 			{{ content|safe }}
 		</div>

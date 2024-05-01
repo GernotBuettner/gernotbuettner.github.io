@@ -1,12 +1,8 @@
 $htmlFontSize: 62.5%;
 
-$weightExtraLight: 200;		// available for: Brando Italic
-$weightLight: 300;			// available for: Brando Italic
-$weightRegular: 400;		// available for: Brando, Brando Italic, WorkSans
-$weightMedium: 500;			// available for: WorkSans
-$weightSemiBold: 600;		// available for: WorkSans
-$weightBold: 700;			// not available
-$weightUltraBold: 800;			// not available
+$weightLight: 300;
+$weightRegular: 400;
+$weightUltraBold: 800;
 
 $fontSizes: (
 	teaserHeadline: (
@@ -21,10 +17,34 @@ $fontSizes: (
 			)
 		)
 	),
+	headlineHighlighted: (
+		font-family: $fontFamilyMain,
+		font-size: pxToRem(24),
+		font-weight: $weightUltraBold,
+		line-height: 1.2,
+		variants: (
+			$smallLayout: (
+				font-size: pxToRem(36),
+				line-height: 1.2
+			)
+		)
+	),
+	headline: (
+		font-family: $fontFamilyMain,
+		font-size: pxToRem(24),
+		font-weight: $weightRegular,
+		line-height: 1.2,
+		variants: (
+			$smallLayout: (
+				font-size: pxToRem(36),
+				line-height: 1.2
+			)
+		)
+	),
 	base: (
 		font-family: $fontFamilyMain,
 		font-size: pxToRem(16),
-		font-weight: $weightRegular,
+		font-weight: $weightLight,
 		line-height: 1.2,
 		variants: (
 			$smallLayout: (

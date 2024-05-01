@@ -1,0 +1,14 @@
+.section {
+	position: relative;
+
+	&--column {
+
+	}
+
+	&__title {
+		@include font(headlineHighlighted);
+		@include headlineBar();
+		position: sticky;
+		top: 0;
+	}
+}

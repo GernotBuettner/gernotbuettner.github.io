@@ -1,7 +1,28 @@
 .main {
-	max-width: $layout-max-width;
+	max-width: $layoutMaxWidht;
+	margin-top: $headerTopSpacingMobile;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: $layout-margin-gap;
-	padding-right: $layout-margin-gap;
+	padding-left: $layoutMarginGapMobile;
+	padding-right: $layoutMarginGapMobile;
+	position: relative;
+
+	@include media($mediumLayout) {
+		padding-left: $layoutMarginGapDesktop;
+		padding-right: $layoutMarginGapDesktop;
+	}
+
+	&__intro {
+		padding-top: -$baseHalf;
+		padding-bottom: $base4;
+	}
+
+	&__headline {
+		@include font(teaserHeadline);
+
+		&--name {
+			margin-bottom: $base2;
+			white-space: nowrap;
+		}
+	}
 }

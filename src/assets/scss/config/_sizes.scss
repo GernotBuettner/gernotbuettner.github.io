@@ -14,9 +14,14 @@ $base9: 9rem;
 
 $basicColumns: repeat(7, 1fr);
 
-$layout-max-width: 1600px;
-$layout-grid-columns: 12;
-$layout-margin-gap: $base6;
+$layoutMaxWidht: 1600px;
+$layoutGridColumns: 12;
+$layoutMarginGapMobile: $base2;
+$layoutMarginGapDesktop: $base6;
 $layout-grid-gap: 20px;
+
+$headerTopSpacingMobile: $base2;
+$headerBottomSpacingMobile: $base2;
+$headerHeight: $base4 + $headerTopSpacingMobile + $headerBottomSpacingMobile;
 
 $menuBarHeight: pxToRem(4);

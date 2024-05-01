@@ -1,0 +1,8 @@
+{% macro projectComponent( project ) %}
+	<div class="project">
+		<a class="project__link" href="{{ project.link }}">
+			<h4 class="project__headline">{{ project.name }}</h4>
+			<p class="project__text">{{ project.description }}</p>
+		</a>
+	</div>
+{% endmacro %}
