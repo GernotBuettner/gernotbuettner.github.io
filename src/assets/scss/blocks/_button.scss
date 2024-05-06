@@ -3,8 +3,8 @@
 		@include ease(filter, 1s);
 		filter: blur($baseHalf);
 		cursor: pointer;
-		width: $base3;
-		height: $base3;
+		width: $base2;
+		height: $base2;
 		border-radius: 50%;
 		background-color: var(--base-color);
 		margin-right: $base4;
@@ -17,7 +17,7 @@
 	&--menu {
 		cursor: pointer;
 		position: relative;
-		width: $base4;
+		width: $base3;
 		height: $base4;
 
 		&::after {
@@ -26,7 +26,7 @@
 			width: 100%;
 			height: $menuBarHeight;
 			position: absolute;
-			top: $base1;
+			top: $base1 + $baseHalf;
 			left: 0;
 		}
 
@@ -36,7 +36,7 @@
 			width: 100%;
 			height: $menuBarHeight;
 			position: absolute;
-			bottom: $base1;
+			bottom: $base1 + $baseHalf;
 			left: 0;
 		}
 	}

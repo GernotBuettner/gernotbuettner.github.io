@@ -1,0 +1,8 @@
+// refer to _static-columns.scss for documentation
+
+// $size is the width in number of columns
+// $total is the max number of columns supported by the grid
+// $hSpace is the gutter
+@function staticColumnSize($size, $total, $hSpace, $extra: '0px') {
+	@return if($size == $total, 100%, if($hSpace != 0, calc(#{100% * $size / $total} + #{($size / $total - 1) * $hSpace} + #{$extra}), calc(#{100% * $size / $total} + #{$extra})));
+}

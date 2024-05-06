@@ -9,7 +9,7 @@
 			{
 				"name": "Ableton.com",
 				"link": "https://ableton.com",
-				"description": "Constant improvement of product tours and components with a focus on usability and accessibility. Creation of new WebComponents and documentation. Refactoring of Django HTML Templates into WebComponents, transformation of legacy Javascript function into OOP Classes and SASS legacy styles into SCSS utility classes and BEM blocks. Implementation of NPS Survey components into Emarsys with communication to Zendesk. Conception and implementation of AB test scenarios"
+				"description": "<p>Constant improvement of product tours and components with a focus on usability and accessibility.</p><p>Creation of new WebComponents and documentation.</p> Refactoring of Django HTML Templates into WebComponents, transformation of legacy Javascript function into OOP Classes and SASS legacy styles into SCSS utility classes and BEM blocks. Implementation of NPS Survey components into Emarsys with communication to Zendesk. Conception and implementation of AB test scenarios"
 			}
 		]
 	},
@@ -17,13 +17,82 @@
 		"company": "CDLX",
 		"link": "https://cdlx.de",
 		"role": "Fullstack Developer",
-		"timeframe": "2018 - 2021",
+		"timeframe": "2019 - 2021",
 		"description": "My job in CDLX included the development and exchange of ideas for digital products and services. That gave me the opportunity to work closely with designers and clients to produce high quality websites and configurators.",
 		"projects": [
 			{
 				"name": "The New Insitute",
 				"link": "https://thenew.institute/",
 				"description": "Implementation of the Layout concept and development of components like main navigation, collapsables items, videos, images, etc."
+			},
+			{
+				"name": "Stiftung Kunstfonds",
+				"link": "https://www.kunstfonds.de/",
+				"description": "Development of the website, including the implementation of the UI/UX principles. creation of a search API to search, sort, and filter art pieces from their catalog."
+			},
+			{
+				"name": "University of Bielefeld",
+				"link": "https://www.uni-bielefeld.de/",
+				"description": "Creation of templates and styling for the integration into Roxen with maintainance, extensions and long term client support with high focus on accessibility."
+			},
+			{
+				"name": "Hans Grohe ",
+				"link": "",
+				"description": "Creating reusable Angular components for an internal research app in connection with REST API for PIM and asset management. Agile workflow with dailies, refinements, plannings & review/retros."
+			},
+			{
+				"name": "Isipedia Climate Institute, Potsdam",
+				"link": "",
+				"description": "I participated in the creation of the website and the Frontend part for the configurator which allow scientist to climate-impacts assessments reports. (*<a href=\"https://www.ddc.de/de/wettbewerb/gute-gestaltung-2019/interactive/isipedia-the-open-climate-impacts-encyclopedia.php\" target=\"_blank\">DDC award</a>"
+			},
+			{
+				"name": "VG Bildkunst & Bund Bildender Künstler",
+				"link": "",
+				"description": "Frontend implementation of an internal form generator app for VG Bildkunst."
+			},
+			{
+				"name": "Selux",
+				"link": "https://www.selux.com/lookbook/aira-de_ger/",
+				"description": "Planning and execution of a lightning concept for product photo shooting. "
+			}
+		]
+	},
+	{
+		"company": "CDLX",
+		"link": "https://cdlx.de",
+		"role": "Junior Frontend Developer",
+		"timeframe": "2017 - 2018",
+		"description": "<p>* If not further specified, projects were developed in PHP with customized Kirby CMS, HTML, Javascript, SCSS using BEM structure & GIT for distribution.</p>",
+		"projects": [
+			{
+				"name": "Weizenbaum Institute",
+				"link": "https://www.weizenbaum-institut.de/",
+				"description": "Maintainance and creation of templates for implementation into Typo3. Implementation of the publication search section in connection with the Zotero API. "
+			},
+			{
+				"name": "Land der Ideen",
+				"link": "https://land-der-ideen.de/",
+				"description": "Implementation and maintenance of components for campaigns."
+			},
+			{
+				"name": "Waald",
+				"link": "https://waald.com/",
+				"description": "Implementation of the layout concept and development of the website."
+			},
+			{
+				"name": "Bundesverband der Deutschen Industrie e.V.",
+				"link": "https://bdi.eu/",
+				"description": ""
+			},
+			{
+				"name": "Galerie Nordenhake",
+				"link": "https://nordenhake.com/",
+				"description": ""
+			},
+			{
+				"name": "Diculta",
+				"link": "http://diculta.com/",
+				"description": ""
 			}
 		]
 	}

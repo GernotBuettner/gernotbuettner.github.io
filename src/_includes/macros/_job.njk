@@ -1,21 +1,23 @@
 {% from 'macros/_project.njk' import projectComponent %}
 
 {% macro jobComponent( job ) %}
-	<a class="job__link" href="{{ job.link }}">
-		<h3 class="job__headline">{{ job.company }}</h3>
-	</a>
-	<div class="job__content">
-		<div class="job__column">
-			<div>
-				<p class="job__detail">{{ job.role }}</p>
-				<p class="job__detail">{{ job.timeframe }}</p>
+	<div class="job">
+		<a class="job__link" href="{{ job.link }}">
+			<h3 class="job__headline">{{ job.company }}</h3>
+		</a>
+		<div class="job__content">
+			<div class="job__column">
+				<div class="job__meta">
+					<p class="job__detail">{{ job.role }}</p>
+					<p class="job__detail">{{ job.timeframe }}</p>
+				</div>
+				<p class="job__description">{{ job.description | safe }}</p>
 			</div>
-			<p>{{ job.description }}</p>
-		</div>
-		<div class="job__column">
-			{% for project in job.projects %}
-				{{ projectComponent( project ) }}
-			{% endfor %}
+			<div class="job__column">
+				{% for project in job.projects %}
+					{{ projectComponent( project ) }}
+				{% endfor %}
+			</div>
 		</div>
 	</div>
 {% endmacro %}

@@ -1,0 +1,5 @@
+.body {
+	@include font(base);
+	overflow-x: hidden;
+	overflow-y: scroll;
+}

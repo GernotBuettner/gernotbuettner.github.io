@@ -1,0 +1,26 @@
+.project {
+
+	& + & {
+		margin-top: $base6;
+	}
+
+	&__headline {
+		@include font(subHeadline);
+		margin-top: $base6;
+
+		@include media($mediumLayout) {
+			margin-top: 0;
+		}
+	}
+
+	&__link {
+		@include link();
+		display: block;
+	}
+
+	&__text {
+		margin-top: $base2;
+		// max-width: staticColumnSize(8, 12, $gapSmall);
+	}
+
+}

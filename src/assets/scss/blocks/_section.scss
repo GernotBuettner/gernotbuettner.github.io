@@ -2,7 +2,7 @@
 	position: relative;
 
 	&--column {
-
+		display: flex;
 	}
 
 	&__title {
@@ -10,5 +10,35 @@
 		@include headlineBar();
 		position: sticky;
 		top: 0;
+		z-index: 1;
+
+		@include media($mediumLayout) {
+			margin-right: $gapSmall;
+			width: staticColumnSize(4, 12, $gapSmall);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: $layoutMarginGapMobile;
+			background-color: var(--base-background-color);
+			height: 100%;
+			top: 0;
+			right: 0;
+			transform: translateX(100%);
+
+			@include media($mediumLayout) {
+				display: none;
+			}
+		}
+	}
+
+	&__content {
+		z-index: 0;
+
+		@include media($mediumLayout) {
+			width: staticColumnSize(8, 12, $gapSmall);
+		}
+
 	}
 }

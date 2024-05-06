@@ -1,0 +1,9 @@
+.ugc {
+	p + p {
+		margin-top: $baseHalf;
+	}
+
+	a {
+		@include link();
+	}
+}

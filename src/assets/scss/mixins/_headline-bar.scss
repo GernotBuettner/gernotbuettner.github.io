@@ -4,4 +4,9 @@
 	border-bottom: solid 1px var(--border-color);
 	padding-top: $base2 + $baseHalf;
 	padding-bottom: $base2 + $baseHalf;
+	height: pxToRem(79.8);
+
+	@include media($mediumLayout) {
+		height: pxToRem(95.2);
+	}
 }

@@ -7,9 +7,3 @@
 	scroll-behavior: smooth;
 	width: 100%;
 }
-
-.body {
-	@include font(base);
-	overflow-x: hidden;
-	overflow-y: scroll;
-}

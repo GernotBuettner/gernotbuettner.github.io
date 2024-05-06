@@ -13,16 +13,31 @@
 	}
 
 	&__intro {
-		padding-top: -$baseHalf;
 		padding-bottom: $base4;
+		height: 100vh;
+	}
+
+	&__animatedHeadline {
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__filter {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
 	}
 
 	&__headline {
-		@include font(teaserHeadline);
-
 		&--name {
+			@include font(teaserHeadline);
 			margin-bottom: $base2;
 			white-space: nowrap;
+		}
+
+		&--title {
+			@include font(headlineHighlighted);
 		}
 	}
 }

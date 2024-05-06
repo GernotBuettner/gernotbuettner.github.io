@@ -17,11 +17,11 @@ $basicColumns: repeat(7, 1fr);
 $layoutMaxWidht: 1600px;
 $layoutGridColumns: 12;
 $layoutMarginGapMobile: $base2;
-$layoutMarginGapDesktop: $base6;
-$layout-grid-gap: 20px;
+$layoutMarginGapDesktop: $base4;
+$gapSmall: $base2;
 
 $headerTopSpacingMobile: $base2;
 $headerBottomSpacingMobile: $base2;
 $headerHeight: $base4 + $headerTopSpacingMobile + $headerBottomSpacingMobile;
 
-$menuBarHeight: pxToRem(4);
+$menuBarHeight: pxToRem(3);
