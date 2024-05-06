@@ -1,6 +1,8 @@
+// https://color-name-generator.com/
+
 $black: #000000;
 $nero: #262626;
-$white: #ffffff;
+$cloud: #e3f0f0;
 $beluga: #f1f1f1;
 $platinumGranite: #817e7e;
 
@@ -8,7 +10,7 @@ $platinumGranite: #817e7e;
 /* VARIABLES */
 :root {
 	--base-background-color: #{$black};
-	--base-color: #{$white};
+	--base-color: #{$cloud};
 	--base-text-color: #{$beluga};
 	--border-color: #{$platinumGranite};
 
@@ -16,7 +18,7 @@ $platinumGranite: #817e7e;
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--base-background-color: #{$white};
+		--base-background-color: #{$cloud};
 		--base-color: #{$black};
 		--base-text-color: #{$nero};
 		--border-color: #{$platinumGranite};

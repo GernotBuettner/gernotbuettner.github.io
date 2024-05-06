@@ -74,11 +74,12 @@
 		padding-top: $base2 + $baseHalf;
 		padding-bottom: $base2 + $baseHalf;
 		position: sticky;
-		top: $headerHeight + $base1 + $baseHalf;
+		top: $headerHeight;
 
 		@include media($mediumLayout) {
 			@include headlineBar();
 			position: static;
+			top: $headerHeight + $base1 + $baseHalf;
 		}
 	}
 

@@ -2,7 +2,9 @@
 	position: relative;
 
 	&--column {
-		display: flex;
+		@include media($mediumLayout) {
+			display: flex;
+		}
 	}
 
 	&__title {
