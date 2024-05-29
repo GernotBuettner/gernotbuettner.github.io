@@ -39,7 +39,7 @@
 		z-index: 0;
 
 		@include media($mediumLayout) {
-			width: staticColumnSize(8, 12, $gapSmall);
+			width: staticColumnSize(10, 12, $gapSmall);
 		}
 
 	}

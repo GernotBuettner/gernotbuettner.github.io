@@ -1,7 +1,7 @@
 .job {
 
 	& + & {
-		margin-top: $base4;
+		margin-top: $base1 * 15;
 	}
 
 	&__content {
@@ -16,7 +16,7 @@
 
 	&__column {
 		@include media($mediumLayout) {
-			width: staticColumnSize(4, 8, $gapSmall);
+			width: staticColumnSize(4.5, 9, $gapSmall);
 		}
 
 		&:first-child {
@@ -36,6 +36,7 @@
 
 	&__detail {
 		@include font(detail);
+		color: var(--base-text-color);
 	}
 
 	&__headline {
@@ -48,7 +49,7 @@
 			width: $base6;
 			height: pxToRem(3);
 			position: absolute;
-			bottom: pxToRem(8);
+			bottom: $base1;
 			right: 0;
 		}
 
@@ -60,7 +61,7 @@
 			position: absolute;
 			transform: rotate(45deg);
 			right: pxToRem(1.8);
-			bottom: pxToRem(9);
+			bottom: pxToRem(11);
 			transform-origin: right bottom;
 		}
 	}
@@ -87,7 +88,4 @@
 		display: flex;
 		justify-content: space-between;
 	}
-
-
-
 }

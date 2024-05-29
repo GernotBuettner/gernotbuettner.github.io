@@ -8,7 +8,8 @@
 	position: relative;
 
 	@include media($mediumLayout) {
-		height: pxToRem(95.2);
 		border-radius: $base1;
+		padding-top: $base2;
+		padding-bottom: $base2;
 	}
 }

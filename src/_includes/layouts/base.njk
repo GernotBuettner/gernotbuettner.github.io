@@ -8,32 +8,14 @@
 		{% include "components/_header.njk" %}
 		<div class="main__intro">
 			<h1 class="main__headline main__headline--name">Gernot Büttner</h1>
-			<div class="main__animatedHeadline">
-				<svg class="main__filter" version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-					<defs>
-						<filter id="blending">
-							<feTurbulence id="turbulence" baseFrequency="0.01,0.01" numOctaves="2" result="noise" seed="1" type="turbulence"></feTurbulence>
-							<feDisplacementMap in="SourceGraphic" in2="NOISE" scale="5"></feDisplacementMap>
-
-							<feComposite operator="in" in="myTurbulence" in2="SourceAlpha" result="myComposite"/>
-							<animate
-								xlink:href="#turbulence"
-								attributeName="baseFrequency"
-								dur="60s"
-								keyTimes="0;0.5;1"
-								values="0.1 0.1;0.2 0.4;0.1 0.1"
-								repeatCount="indefinite"
-							></animate>
-						</filter>
-					</defs>
-				</svg>
-
-				<h2 class="main__headline main__headline--title" >Web Development & Music</h2>
+			<h2 class="main__headline main__headline--title">Web Development & Music</h2>
 			</div>
 		</div>
 		<div class="main__content">
 			{{ content|safe }}
 		</div>
 	</main>
+
+	<script src="/assets/js/main.js"></script>
 </body>
 </html>
