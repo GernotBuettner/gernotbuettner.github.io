@@ -12,6 +12,10 @@ title: "Gernot Büttner Web Development & Music"
 			{% for job in jobs %}
 				{{ jobComponent( job ) }}
 			{% endfor %}
+
+			{% for skill in skills %}
+				{{ skillComponent( skill ) }}
+			{% endfor %}
 		</div>
 	</section>
 {% endblock %}

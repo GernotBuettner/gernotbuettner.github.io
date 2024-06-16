@@ -1,8 +1,10 @@
 $cursorDimension: pxToRem(20);
+// TODO: fallback to default cursor on touch devices
 
 .custom-cursor {
 	border-radius: $cursorDimension;
 	background-color: var(--base-color);
+	display: none;
 	position: fixed;
 	transform: translate(-50%, -50%);
 	top: 0;
