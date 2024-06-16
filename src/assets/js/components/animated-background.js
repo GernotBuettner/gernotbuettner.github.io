@@ -5,7 +5,6 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 export default class AnimatedBackgroundComponent {
 	constructor() {
-		console.log("constructor");
 		this.camera = null;
 		this.scene = null;
 		this.renderer = null;
@@ -24,23 +23,23 @@ export default class AnimatedBackgroundComponent {
 	}
 
 	init() {
-		window.addEventListener( 'resize', this.onWindowResize.bind(this) );
+		// window.addEventListener( 'resize', this.onWindowResize.bind(this) );
 
-		this.createCamera();
-		this.createScene();
-		this.createMatrix();
+		// this.createCamera();
+		// this.createScene();
+		// this.createMatrix();
 
-		// TODO: Insert into component rather than body
-		document.body.appendChild( this.renderer.domElement );
+		// // TODO: Insert into component rather than body
+		// document.body.appendChild( this.renderer.domElement );
 
-		if (this.enableControls) {
-			this.createControls();
-		}
+		// if (this.enableControls) {
+		// 	this.createControls();
+		// }
 
-		this.stats = new Stats();
-		document.body.appendChild( this.stats.dom );
+		// this.stats = new Stats();
+		// document.body.appendChild( this.stats.dom );
 
-		this.animate();
+		// this.animate();
 	}
 
 
