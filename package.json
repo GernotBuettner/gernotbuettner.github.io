@@ -5,13 +5,13 @@
 	"main": "index.js",
 	"scripts": {
 		"clean": "rimraf dist",
-		"watch:11ty": "ELEVENTY_ENV=development eleventy --serve",
+		"watch:11ty": "cross-env ELEVENTY_ENV=development eleventy --serve",
 		"watch:webpack": "webpack --mode development --watch",
 		"watch:sass": "sass --no-source-map --watch src/assets/scss/index.scss:dist/assets/css/main.css",
 		"watch": "npm-run-all clean build:sass --parallel watch:*",
 		"build:sass": "sass --no-source-map src/assets/scss/index.scss:dist/assets/css/main.css",
 		"build:webpack": "webpack --mode production",
-		"build:eleventy": "ELEVENTY_ENV=production eleventy",
+		"build:eleventy": "cross-env ELEVENTY_ENV=production eleventy",
 		"build": "npm-run-all clean --parallel build:*",
 		"start": "npm-run-all watch"
 	},
@@ -28,6 +28,7 @@
 	"homepage": "https://github.com/GernotBuettner/gernotbuettner.github.io#readme",
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.1",
+		"cross-env": "^7.0.3",
 		"rimraf": "^5.0.5",
 		"webpack": "^5.91.0",
 		"webpack-cli": "^5.1.4"
