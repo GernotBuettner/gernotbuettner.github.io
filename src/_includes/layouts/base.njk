@@ -10,13 +10,16 @@
 		<div class="main__intro">
 			<h1 class="main__headline main__headline--name">Gernot Büttner</h1>
 			<h2 class="main__headline main__headline--title">Web Development & Music</h2>
-			</div>
+			<span class="main__animation" data-component="animated-background"></span>
 		</div>
 		<div class="main__content">
 			{{ content|safe }}
 		</div>
 	</main>
 
+	{% include "components/_threejs-scripts.njk" %}
+
 	<script src="/assets/js/main.js"></script>
+
 </body>
 </html>

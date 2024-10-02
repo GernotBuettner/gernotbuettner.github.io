@@ -4,14 +4,15 @@ import Stats from 'three/addons/libs/stats.module.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 export default class AnimatedBackgroundComponent {
-	constructor() {
+	constructor(element) {
+		this.element = element
 		this.camera = null;
 		this.scene = null;
 		this.renderer = null;
 		this.stats = null;
 		this.mesh = null;
 		this.controls = null;
-		this.enableControls = true;
+		this.enableControls = false;
 
 		this.amount = parseInt( window.location.search.slice( 1 ) ) || 10;
 		this.count = Math.pow( this.amount, 3 );
@@ -23,23 +24,21 @@ export default class AnimatedBackgroundComponent {
 	}
 
 	init() {
-		// window.addEventListener( 'resize', this.onWindowResize.bind(this) );
+		window.addEventListener( 'resize', this.onWindowResize.bind(this) );
 
-		// this.createCamera();
-		// this.createScene();
-		// this.createMatrix();
+		this.createCamera();
+		this.createScene();
+		this.createSphere();
+		this.element.appendChild( this.renderer.domElement );
 
-		// // TODO: Insert into component rather than body
-		// document.body.appendChild( this.renderer.domElement );
+		if (this.enableControls) {
+			this.createControls();
+		}
 
-		// if (this.enableControls) {
-		// 	this.createControls();
-		// }
+		this.stats = new Stats();
+		document.body.appendChild( this.stats.dom );
 
-		// this.stats = new Stats();
-		// document.body.appendChild( this.stats.dom );
-
-		// this.animate();
+		this.animate();
 	}
 
 
@@ -52,7 +51,7 @@ export default class AnimatedBackgroundComponent {
 
 
 	createCamera() {
-		this.camera = new THREE.PerspectiveCamera( 25, window.innerWidth / window.innerHeight, 0.1, 100 );
+		this.camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 0.1, 100 );
 		this.camera.position.set( this.amount, this.amount, this.amount );
 		this.camera.lookAt( 0, 0, 0 );
 	}
@@ -67,28 +66,21 @@ export default class AnimatedBackgroundComponent {
 	}
 
 
-	createMatrix() {
-		const geometry = new THREE.IcosahedronGeometry( 0.008, 3 );
-		const material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
-		this.mesh = new THREE.InstancedMesh( geometry, material, this.count );
-
-		let i = 0;
-		const offset = ( this.amount - 1 ) / 2;
-
-		const matrix = new THREE.Matrix4();
-
-		for ( let x = 0; x < this.amount; x ++ ) {
-			for ( let y = 0; y < this.amount; y ++ ) {
-				for ( let z = 0; z < this.amount; z ++ ) {
-					matrix.setPosition( offset - x, offset - y, offset - z );
-
-					this.mesh.setMatrixAt( i, matrix );
-					this.mesh.setColorAt( i, this.color );
-
-					i ++;
-				}
-			}
+	createSphere() {
+		const uniforms = {
+			u_resolution: { type: 'v2', value: new THREE.Vector2(window.innerWidth, window.innerHeight ) },
+			u_time: { type: 'f', value: 0.0 }
 		}
+
+		const material = new THREE.ShaderMaterial({
+			wireframe: true,
+			uniforms,
+			vertexShader: document.getElementById('vertexshader').textContent,
+			fragmentShader: document.getElementById('fragmentshader').textContent
+		})
+
+		const geometry = new THREE.IcosahedronGeometry( 4, 30 );
+		this.mesh = new THREE.Mesh( geometry, material )
 
 		this.scene.add( this.mesh );
 
@@ -112,24 +104,6 @@ export default class AnimatedBackgroundComponent {
 			this.controls.update();
 		}
 
-		const boundary = 100;
-		const factor = 10;
-
-		if (this.direction === 1) {
-			this.animatedX ++;
-
-			if (this.animatedX === boundary) {
-				this.direction = -1;
-			}
-		} else {
-			this.animatedX--;
-
-			if (this.animatedX === 0) {
-				this.direction = 1;
-			}
-		}
-
-		this.camera.position.set(0, this.animatedX, 0)
 		this.render();
 		this.stats.update();
 	}

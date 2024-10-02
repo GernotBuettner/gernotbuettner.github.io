@@ -7,4 +7,7 @@ export default function createComponentFactory(Class, name) {
 			instanciatedClass.init();
 		});
 	}
+	if (!name) {
+		console.error('Component Factory: No name passed to component.')
+	}
 }
