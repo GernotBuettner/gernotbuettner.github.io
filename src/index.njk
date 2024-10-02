@@ -4,6 +4,7 @@ title: "Gernot Büttner Web Development & Music"
 ---
 
 {% from 'macros/_job.njk' import jobComponent %}
+{% from 'macros/_skill.njk' import skillComponent %}
 
 {% block content %}
 	<section class="section section--column">
@@ -13,9 +14,17 @@ title: "Gernot Büttner Web Development & Music"
 				{{ jobComponent( job ) }}
 			{% endfor %}
 
-			{% for skill in skills %}
-				{{ skillComponent( skill ) }}
-			{% endfor %}
+		</div>
+	</section>
+
+	<section>
+		<h2 class="section__title">Skills</h2>
+		<div class="section__content">
+			<div class="skills">
+				{% for skill in skills %}
+					{{ skillComponent( skill ) }}
+				{% endfor %}
+			</div>
 		</div>
 	</section>
 {% endblock %}

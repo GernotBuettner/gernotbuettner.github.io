@@ -1,16 +1,19 @@
 $cursorDimension: pxToRem(20);
-// TODO: fallback to default cursor on touch devices
 
 .custom-cursor {
-	border-radius: $cursorDimension;
-	background-color: var(--base-color);
 	display: none;
-	position: fixed;
-	transform: translate(-50%, -50%);
-	top: 0;
-	left: 0;
-	height: $cursorDimension;
-	width: $cursorDimension;
-	z-index: 3;
-	mix-blend-mode: difference;
+
+	@include media($mediumLayout) {
+		border-radius: $cursorDimension;
+		background-color: var(--base-color);
+		display: none;
+		position: fixed;
+		transform: translate(-50%, -50%);
+		top: 0;
+		left: 0;
+		height: $cursorDimension;
+		width: $cursorDimension;
+		z-index: 3;
+		mix-blend-mode: difference;
+	}
 }
