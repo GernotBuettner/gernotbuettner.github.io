@@ -1,3 +1,4 @@
+// TODO: create fallback to show cursor if JS fails
 export default class CustomCursorCompontent {
 	constructor(element) {
 		this.element = element;

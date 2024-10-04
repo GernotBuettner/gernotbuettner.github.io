@@ -1,10 +1,9 @@
 .main {
 	max-width: $layoutMaxWidht;
-	margin-top: $headerTopSpacingMobile;
+	// margin-top: $headerTopSpacingMobile;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: $layoutMarginGapMobile;
-	padding-right: $layoutMarginGapMobile;
+
 	position: relative;
 
 	@include media($mediumLayout) {
@@ -19,11 +18,18 @@
 		bottom: 0;
 		left: 0;
 		z-index: 0;
+		overflow: hidden;
+	}
+
+	&__content {
+		padding-left: $layoutMarginGapMobile;
+		padding-right: $layoutMarginGapMobile;
 	}
 
 	&__intro {
 		padding-bottom: $base4;
 		height: 100vh;
+		position: relative;
 	}
 
 	&__filter {
@@ -36,10 +42,13 @@
 	&__headline {
 		position: relative;
 		z-index: 1;
+		padding-left: $layoutMarginGapMobile;
+
 
 		&--name {
 			@include font(teaserHeadline);
 			margin-bottom: $base2;
+			padding-top: $base2;
 			white-space: nowrap;
 		}
 
