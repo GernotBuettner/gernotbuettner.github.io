@@ -6,10 +6,7 @@
 
 	position: relative;
 
-	@include media($mediumLayout) {
-		padding-left: $layoutMarginGapDesktop;
-		padding-right: $layoutMarginGapDesktop;
-	}
+
 
 	&__animation {
 		position: absolute;
@@ -24,6 +21,11 @@
 	&__content {
 		padding-left: $layoutMarginGapMobile;
 		padding-right: $layoutMarginGapMobile;
+
+		@include media($mediumLayout) {
+			padding-left: $layoutMarginGapDesktop;
+			padding-right: $layoutMarginGapDesktop;
+		}
 	}
 
 	&__intro {
@@ -43,6 +45,10 @@
 		position: relative;
 		z-index: 1;
 		padding-left: $layoutMarginGapMobile;
+
+		@include media($mediumLayout) {
+			padding-left: $layoutMarginGapDesktop;
+		}
 
 
 		&--name {

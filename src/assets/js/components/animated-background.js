@@ -1,7 +1,6 @@
 // Credit the inspiration 🙏 -> https://waelyasmina.net/articles/how-to-create-a-3d-audio-visualizer-using-three-js/
 
 import * as THREE from 'three';
-import Stats from 'three/addons/libs/stats.module.js';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
@@ -18,16 +17,14 @@ export default class AnimatedBackgroundComponent {
 		this.stats = null;
 		this.mesh = null;
 		this.bloomComposer = null;
-
-		this.inertiaActive = false;
-		this.inertia = 0;
-		this.lastScrollY = window.scrollY;
-		this.rotationFactor = 0;
-		this.timeoutId = 0;
-		this.componentHeight = 0;
+		this.enableBloom = false;
 
 		this.amount = parseInt( window.location.search.slice( 1 ) ) || 10;
 		this.clock = new THREE.Clock();
+		this.requestAnimationID = 0;
+		this.isInBounds = false;
+		this.isAnimating = false;
+		this.componentHeight = 0;
 	}
 
 	init() {
@@ -39,13 +36,50 @@ export default class AnimatedBackgroundComponent {
 
 		this.element.appendChild( this.renderer.domElement );
 
-		this.stats = new Stats();
-		document.body.appendChild( this.stats.dom );
+		this.checkBounds();
 
-		this.render();
-		this.animate();
+		if (this.isInBounds) {
+			this.render();
+			this.animate();
+		}
 
 		window.addEventListener('scroll', this.onScroll.bind(this))
+	}
+
+	onWindowResize() {
+		this.camera.aspect = window.innerWidth / window.innerHeight;
+		this.camera.updateProjectionMatrix();
+
+		this.renderer.setSize( window.innerWidth, window.innerHeight );
+
+		if (this.enableBloom) {
+			this.bloomComposer.setSize(window.innerWidth, window.innerHeight);
+		}
+
+		this.checkBounds();
+
+		if (this.isInBounds) {
+			if (!this.isAnimating) {
+				this.animate();
+			}
+		} else {
+			this.stopAnimation();
+		}
+
+	}
+
+	onScroll() {
+		this.checkBounds();
+
+		if (this.isInBounds) {
+			this.rotateSphere();
+
+			if (!this.isAnimating) {
+				this.animate();
+			}
+		} else {
+			this.stopAnimation();
+		}
 	}
 
 	createCamera() {
@@ -57,8 +91,6 @@ export default class AnimatedBackgroundComponent {
 
 	createScene() {
 		this.scene = new THREE.Scene();
-		// const axesHelper = new THREE.AxesHelper( 5 );
-		// this.scene.add( axesHelper );
 		const light = new THREE.HemisphereLight( 0xffffff, 0x888888, 3 );
 		light.position.set( 0, 1, 0 );
 		this.scene.add( light );
@@ -69,7 +101,6 @@ export default class AnimatedBackgroundComponent {
 		this.uniforms = {
 			u_resolution: { type: 'v2', value: new THREE.Vector2(window.innerWidth, window.innerHeight ) },
 			u_time: { type: 'f', value: 0.0 },
-
 		}
 
 		const material = new THREE.ShaderMaterial({
@@ -79,7 +110,7 @@ export default class AnimatedBackgroundComponent {
 			fragmentShader: document.getElementById('fragmentshader').textContent
 		})
 
-		this.geometry = new THREE.IcosahedronGeometry( 4, 30 );
+		this.geometry = new THREE.IcosahedronGeometry( 4, 20 );
 		this.mesh = new THREE.Mesh( this.geometry, material )
 
 		this.scene.add( this.mesh );
@@ -90,50 +121,52 @@ export default class AnimatedBackgroundComponent {
 		this.renderer.setSize( window.innerWidth, window.innerHeight );
 	}
 
-	onWindowResize() {
-		this.camera.aspect = window.innerWidth / window.innerHeight;
-		this.camera.updateProjectionMatrix();
-
-		this.renderer.setSize( window.innerWidth, window.innerHeight );
-		this.bloomComposer.setSize(window.innerWidth, window.innerHeight);
-	}
-
-	onScroll() {
-		this.rotateSphere();
+	checkBounds() {
+		this.componentHeight = this.element.getBoundingClientRect().height;
+		this.isInBounds = (this.componentHeight - window.scrollY > 0);
 	}
 
 	rotateSphere() {
-		this.componentHeight = this.element.getBoundingClientRect().height;
-		const isInBounds = (this.componentHeight - window.scrollY > 0);
-
-		if (isInBounds) {
-			// 180° × π/180 = 3.141rad
-			const progressInRad = 3.141 / this.componentHeight * window.scrollY;
-			this.scene.rotation.y = progressInRad;
-		}
+		// 180° × π/180 = 3.141rad
+		const progressInRad = 3.141 / this.componentHeight * window.scrollY;
+		this.scene.rotation.y = progressInRad;
 	}
 
 	animate() {
-		this.uniforms.u_time.value = this.clock.getElapsedTime();
-		this.bloomComposer.render();
-		this.stats.update();
-		requestAnimationFrame(() => this.animate());
+		this.isAnimating = true;
+		this.uniforms.u_time.value = this.clock.getElapsedTime() * 0.5;
+
+		if (this.enableBloom) {
+			this.bloomComposer.render();
+		} else {
+			this.renderer.render(this.scene, this.camera);
+		}
+		this.requestAnimationID = requestAnimationFrame(() => this.animate());
+	}
+
+	stopAnimation() {
+		this.isAnimating = false;
+		window.cancelAnimationFrame(this.requestAnimationID);
 	}
 
 	render() {
-		const renderScene = new RenderPass(this.scene, this.camera);
-		const bloomPass = new UnrealBloomPass(
-			new THREE.Vector2(window.innerWidth, window.innerHeight)
-		);
-		bloomPass.threshold = 0.5;
-		bloomPass.strength = 0.4;
-		bloomPass.radius = 0.8;
+		if (this.enableBloom) {
+			const renderScene = new RenderPass(this.scene, this.camera);
+			const bloomPass = new UnrealBloomPass(
+				new THREE.Vector2(window.innerWidth, window.innerHeight)
+			);
+			bloomPass.threshold = 0.5;
+			bloomPass.strength = 0.2;
+			bloomPass.radius = 0.4;
 
-		const outputPass = new OutputPass();
+			const outputPass = new OutputPass();
 
-		this.bloomComposer = new EffectComposer(this.renderer);
-		this.bloomComposer.addPass(renderScene);
-		this.bloomComposer.addPass(bloomPass);
-		this.bloomComposer.addPass(outputPass);
+			this.bloomComposer = new EffectComposer(this.renderer);
+			this.bloomComposer.addPass(renderScene);
+			this.bloomComposer.addPass(bloomPass);
+			this.bloomComposer.addPass(outputPass);
+		} else {
+			this.renderer.render(this.scene, this.camera);
+		}
 	}
 }

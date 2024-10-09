@@ -96,7 +96,7 @@
 
 	void main() {
 
-		float noise = 4. * pnoise(position + u_time, vec3(10.));
+		float noise = 3. * pnoise(position + u_time, vec3(10.));
 		float displacement = noise / 10.;
 		vec3 newPosition = position + normal * displacement;
 
