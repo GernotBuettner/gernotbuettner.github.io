@@ -1,12 +1,8 @@
 .main {
 	max-width: $layoutMaxWidht;
-	// margin-top: $headerTopSpacingMobile;
 	margin-left: auto;
 	margin-right: auto;
-
 	position: relative;
-
-
 
 	&__animation {
 		position: absolute;
@@ -14,7 +10,7 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		z-index: 0;
+		z-index: $base-z-index;
 		overflow: hidden;
 	}
 
@@ -43,7 +39,7 @@
 
 	&__headline {
 		position: relative;
-		z-index: 1;
+		z-index: $main-headline-z-index;
 		padding-left: $layoutMarginGapMobile;
 
 		@include media($mediumLayout) {

@@ -1,6 +1,7 @@
 .section {
 	position: relative;
 
+
 	&--column {
 		@include media($mediumLayout) {
 			display: flex;
@@ -12,11 +13,14 @@
 		@include headlineBar();
 		position: sticky;
 		top: 0;
-		z-index: 1;
+		z-index: $section-headline-z-index;
 
 		@include media($mediumLayout) {
+			position: static;
 			margin-right: $gapSmall;
-			width: staticColumnSize(4, 12, $gapSmall);
+			width: staticColumnSize(4, 12, $gapSmall, -$gapSmall);
+			flex-grow: 0;
+			flex-shrink: 0;
 		}
 
 		&::after {
@@ -36,10 +40,15 @@
 	}
 
 	&__content {
-		z-index: 0;
+		z-index: $base-z-index;
 
 		@include media($mediumLayout) {
-			width: staticColumnSize(10, 12, $gapSmall);
+			width: staticColumnSize(8, 12, $gapSmall);
+		}
+
+		.section--skills & {
+			margin-top: $base4;
+			width: staticColumnSize(12, 12, $gapSmall);
 		}
 
 	}

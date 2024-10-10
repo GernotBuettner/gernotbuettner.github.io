@@ -1,6 +1,7 @@
 $cursorDimension: pxToRem(20);
 
 .custom-cursor {
+	pointer-events: none;
 	display: none;
 
 	@include media($mediumLayout) {
@@ -13,7 +14,7 @@ $cursorDimension: pxToRem(20);
 		left: 0;
 		height: $cursorDimension;
 		width: $cursorDimension;
-		z-index: 3;
+		z-index: $custom-cursor-z-index;
 		mix-blend-mode: difference;
 	}
 }

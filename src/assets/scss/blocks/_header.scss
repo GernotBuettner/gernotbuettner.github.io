@@ -6,7 +6,7 @@
 	left: $layoutMarginGapMobile;
 	right: $layoutMarginGapMobile;
 	mix-blend-mode: difference;
-	z-index: 2;
+	z-index: $header-z-index;
 
 	@include media($mediumLayout) {
 		left: $layoutMarginGapDesktop - $base2;
