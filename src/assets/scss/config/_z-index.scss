@@ -2,9 +2,10 @@ $base-z-index: 0;
 $above-z-index: 1;
 $below-z-index: -1;
 
-$custom-cursor-z-index: 4;
-$header-z-index: 3;
-$skill-text-z-index: 2;
-$section-headline-z-index: 1;
-$main-headline-z-index: 1;
-$gradient-background-z-index: $base-z-index;
+$custom-cursor-z-index: 5;
+$header-z-index: 4;
+$skill-text-z-index: 3;
+$section-headline-z-index: 2;
+$main-headline-z-index: 2;
+$skill-text-z-index: 1;
+$skill-gradient-z-index: $base-z-index;
