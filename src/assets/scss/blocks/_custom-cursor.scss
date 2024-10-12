@@ -1,10 +1,12 @@
-$cursorDimension: pxToRem(20);
+$cursorDimension: pxToRem(15);
+$cursorDimensionExpanded: pxToRem(30);
 
 .custom-cursor {
 	pointer-events: none;
 	display: none;
 
 	@include media($mediumLayout) {
+		@include ease(filter width height, 0.4s);
 		border-radius: $cursorDimension;
 		background-color: var(--base-color);
 		display: none;
@@ -17,4 +19,14 @@ $cursorDimension: pxToRem(20);
 		z-index: $custom-cursor-z-index;
 		mix-blend-mode: difference;
 	}
+
+	&--link-hovered {
+		@include media($mediumLayout) {
+			width: $cursorDimensionExpanded;
+			height: $cursorDimensionExpanded;
+			filter: blur($baseHalf);
+		}
+	}
+
+	// TODO: come up with design for text selection
 }

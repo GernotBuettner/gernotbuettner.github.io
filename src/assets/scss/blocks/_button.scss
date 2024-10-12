@@ -1,21 +1,14 @@
 .button {
 	&--mode {
-		@include ease(filter, 1s);
 		filter: blur($baseHalf);
-		cursor: pointer;
 		width: $base2;
 		height: $base2;
 		border-radius: 50%;
 		background-color: var(--base-color);
 		margin-right: $base4;
-
-		&:hover {
-			filter: blur($base2);
-		}
 	}
 
 	&--menu {
-		cursor: pointer;
 		position: relative;
 		width: $base3;
 		height: $base4;

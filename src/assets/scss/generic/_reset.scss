@@ -129,3 +129,8 @@ img {
 		animation-delay: 0s !important; // stylelint-disable-line
 	}
 }
+
+a,
+button {
+	cursor: none;
+}
