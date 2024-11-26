@@ -1,12 +1,11 @@
-$base-z-index: 0;
-$above-z-index: 1;
-$below-z-index: -1;
+$baseIndex: 0;
+$aboveIndex: 1;
+$belowIndex: -1;
 
-$custom-cursor-z-index: 6;
-$menu-z-index: 5;
-$header-z-index: 4;
-$skill-text-z-index: 3;
-$section-headline-z-index: 2;
-$main-headline-z-index: 2;
-$skill-text-z-index: 1;
-$skill-gradient-z-index: $base-z-index;
+$customCursorIndex: 6;
+$headerIndex: 5;
+$menuIndex: 4;
+$sectionHeadlineIndex: 2;
+$mainHeadlineIndex: 2;
+$skillTextIndex: 1;
+$skillGradientIndex: $baseIndex;
