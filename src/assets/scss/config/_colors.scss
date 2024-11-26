@@ -8,19 +8,39 @@ $platinumGranite: #817e7e;
 
 
 /* VARIABLES */
-:root {
-	--base-background-color: #{$black};
-	--base-color: #{$cloud};
-	--base-text-color: #{$beluga};
-	--border-color: #{$platinumGranite};
+@media (prefers-color-scheme: dark) {
+	:root {
+		--base-background-color: #{$black};
+		--base-background-color-inverted: #{$cloud};
+		--base-color: #{$cloud};
+		--base-text-color: #{$beluga};
+		--border-color: #{$platinumGranite};
 
+	}
 }
 
 @media (prefers-color-scheme: light) {
 	:root {
 		--base-background-color: #{$cloud};
+		--base-background-color-inverted: #{$black};
 		--base-color: #{$black};
 		--base-text-color: #{$nero};
 		--border-color: #{$platinumGranite};
 	}
+}
+
+.html:not(.html--light) {
+	--base-background-color: #{$black};
+	--base-background-color-inverted: #{$cloud};
+	--base-color: #{$cloud};
+	--base-text-color: #{$beluga};
+	--border-color: #{$platinumGranite};
+}
+
+.html.html--light {
+	--base-background-color: #{$cloud};
+	--base-background-color-inverted: #{$black};
+	--base-color: #{$black};
+	--base-text-color: #{$nero};
+	--border-color: #{$platinumGranite};
 }
