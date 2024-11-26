@@ -13,7 +13,7 @@
 		@include headlineBar();
 		position: sticky;
 		top: 0;
-		z-index: $section-headline-z-index;
+		z-index: $sectionHeadlineIndex;
 
 		@include media($mediumLayout) {
 			position: static;
@@ -40,7 +40,7 @@
 	}
 
 	&__content {
-		z-index: $base-z-index;
+		z-index: $baseIndex;
 
 		@include media($mediumLayout) {
 			width: staticColumnSize(8, 12, $gapSmall);

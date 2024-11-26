@@ -10,7 +10,7 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		z-index: $base-z-index;
+		z-index: $baseIndex;
 		overflow: hidden;
 	}
 
@@ -39,7 +39,7 @@
 
 	&__headline {
 		position: relative;
-		z-index: $main-headline-z-index;
+		z-index: $mainHeadlineIndex;
 		padding-left: $layoutMarginGapMobile;
 
 		@include media($mediumLayout) {

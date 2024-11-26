@@ -16,7 +16,7 @@ $cursorDimensionExpanded: pxToRem(30);
 		left: 0;
 		height: $cursorDimension;
 		width: $cursorDimension;
-		z-index: $custom-cursor-z-index;
+		z-index: $customCursorIndex;
 		mix-blend-mode: difference;
 	}
 
