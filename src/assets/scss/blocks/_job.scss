@@ -41,29 +41,7 @@
 
 	&__headline {
 		@include font(headline);
-		position: relative;
-
-		&::after {
-			content: '';
-			background: var(--base-color);
-			width: $base6;
-			height: pxToRem(3);
-			position: absolute;
-			bottom: $base1;
-			right: 0;
-		}
-
-		&::before {
-			content: '';
-			background: var(--base-color);
-			width: $base3;
-			height: pxToRem(3);
-			position: absolute;
-			transform: rotate(45deg);
-			right: pxToRem(1.8);
-			bottom: pxToRem(11);
-			transform-origin: right bottom;
-		}
+		@include arrowIcon();
 	}
 
 	&__link {

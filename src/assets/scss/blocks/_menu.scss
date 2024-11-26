@@ -1,7 +1,6 @@
 .menu {
-	// display: none;
 	bottom: 0;
-	display: flex;
+	display: none;
 	justify-content: flex-end;
 	left: 0;
 	margin-left: auto;
@@ -18,6 +17,10 @@
 	@include media($mediumLayout) {
 		padding-left: $layoutMarginGapDesktop;
 		padding-right: $layoutMarginGapDesktop;
+	}
+
+	&--active {
+		display: flex;
 	}
 
 	&__content {
@@ -44,7 +47,37 @@
 	}
 
 	&__list {
-		padding-top: $base8;
+		padding-top: $base1 * 20;
 		padding-left: staticColumnSize(1, 8, $gapSmall);
+	}
+
+	&__item {
+		color: var(--base-color-inverted);
+		border-top: solid 1px var(--border-color);
+		position: relative;
+
+		&:last-of-type {
+			border-bottom: solid 1px var(--border-color);
+		}
+	}
+
+	&__link {
+		display: block;
+		padding-top: $base2 + $baseHalf;
+		padding-bottom: $base2 + $baseHalf;
+		text-decoration: none;
+		text-align: right;
+		width: 100%;
+
+		@include media($mediumLayout) {
+			padding-top: $base2;
+			padding-bottom: $base2;
+		}
+	}
+
+	&__text {
+		display: block;
+		@include arrowIcon(left, --base-color-inverted);
+		@include font(menuItem);
 	}
 }

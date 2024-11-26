@@ -1,5 +1,5 @@
-@mixin headlineBar() {
-	background-color: var(--base-background-color);
+@mixin headlineBar($bgColor: --base-background-color) {
+	background-color: var($bgColor);
 	border-top: solid 1px var(--border-color);
 	border-bottom: solid 1px var(--border-color);
 	padding-top: $base2 + $baseHalf;

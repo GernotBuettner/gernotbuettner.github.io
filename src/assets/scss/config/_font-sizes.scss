@@ -53,6 +53,18 @@ $fontSizes: (
 			)
 		)
 	),
+	menuItem: (
+		font-family: $fontFamilyMain,
+		font-size: pxToRem(18),
+		font-weight: $weightRegular,
+		line-height: 1.2,
+		variants: (
+			$smallLayout: (
+				font-size: pxToRem(21),
+				line-height: 1.2
+			)
+		)
+	),
 	base: (
 		font-family: $fontFamilyMain,
 		font-size: pxToRem(16),
