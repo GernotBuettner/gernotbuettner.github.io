@@ -1,6 +1,7 @@
 .menu {
+	@include ease(transform, 0.4s);
 	bottom: 0;
-	display: none;
+	display: flex;
 	justify-content: flex-end;
 	left: 0;
 	margin-left: auto;
@@ -13,14 +14,15 @@
 	right: 0;
 	top: 0;
 	z-index: $menuIndex;
+	transform: translateX(100%);
 
 	@include media($mediumLayout) {
 		padding-left: $layoutMarginGapDesktop;
 		padding-right: $layoutMarginGapDesktop;
 	}
 
-	&--active {
-		display: flex;
+	&.js-menu-opened {
+		transform: translateX(0);
 	}
 
 	&__content {
@@ -76,8 +78,9 @@
 	}
 
 	&__text {
-		display: block;
 		@include arrowIcon(left, --base-color-inverted);
 		@include font(menuItem);
+		display: block;
+		pointer-events: none;
 	}
 }

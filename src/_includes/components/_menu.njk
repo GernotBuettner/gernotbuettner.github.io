@@ -3,7 +3,7 @@
 		<ul class="menu__list">
 			{% for item in menu_items %}
 				<li class="menu__item">
-					<a class="menu__link" href="#{{ item.name|lower }}">
+					<a class="menu__link" href="#{{ item.name|lower }}" data-selector="menuLink">
 						<span class="menu__text">{{ item.name }}</span>
 					</a>
 				</li>
