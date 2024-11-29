@@ -1,0 +1,12 @@
+.footer {
+	border-top: solid 1px var(--base-background-color-inverted);
+	padding-top: $base5;
+	padding-bottom: $base1 * 20;
+	padding-left: $layoutMarginGapMobile;
+		padding-right: $layoutMarginGapMobile;
+
+		@include media($mediumLayout) {
+			padding-left: $layoutMarginGapDesktop;
+			padding-right: $layoutMarginGapDesktop;
+		}
+}

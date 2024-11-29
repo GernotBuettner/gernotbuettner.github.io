@@ -5,6 +5,9 @@
 		margin-top: $base1 * 10;
 	}
 
+	&:last-of-type {
+		margin-bottom: $base1 * 10;
+	}
 
 	&--column {
 		@include media($mediumLayout) {

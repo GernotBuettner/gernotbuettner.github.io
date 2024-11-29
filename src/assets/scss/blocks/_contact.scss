@@ -1,0 +1,38 @@
+.contact {
+	&__title {
+		width: 100%;
+
+		@include media($mediumLayout) {
+			width: staticColumnSize(4, 12, $gapSmall, -$gapSmall);
+		}
+	}
+
+	&__description {
+		display: flex;
+		align-items: end;
+	}
+
+	&__text {
+		@include font(headlineHighlighted);
+	}
+
+	&__icon {
+		&--mail {
+			@include mailIcon();
+		}
+
+		&--linked-in {
+
+		}
+	}
+
+	&__link {
+		margin-left: $base1;
+		margin-right: $base1;
+		text-decoration: none;
+
+		&--mail {
+			align-self: center;
+		}
+	}
+}
