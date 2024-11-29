@@ -1,7 +1,11 @@
 .job {
 
 	& + & {
-		margin-top: $base1 * 15;
+		margin-top: $base5;
+
+		@include media($mediumLayout) {
+			margin-top: $base1 * 15;
+		}
 	}
 
 	&__content {

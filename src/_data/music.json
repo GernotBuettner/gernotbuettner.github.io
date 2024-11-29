@@ -1,32 +1,36 @@
 [
 	{
-		"name": "MooN / Band",
+		"name": "MooN",
 		"link": "https://www.instagram.com/thebandcalledmoon/",
 		"role": "Musician / Rhytmic Guitar",
+		"type": "Band",
 		"timeframe": "2023 - current",
-		"description": "Moon is a heavy psych band porject playing groovy riffs and atmospheric improvisations. We are a two man band consisting of Drums and Guitar.",
+		"description": "Moon is a heavy psych band playing groovy riffs and atmospheric improvisations. We are a two man band consisting of Drums and Guitar.",
 		"image": "",
 		"videos": []
 	}, {
-		"name": "Ailamfa / Band",
+		"name": "Ailamfa",
 		"link": "https://soundcloud.com/ailamfa",
 		"role": "Musician / Producer",
+		"type": "Band",
 		"timeframe": "2021 - current",
 		"description": "Ailamfa is a musical journey through unfamiliar sonic territory, featuring the use of feedback loops to generate intricate overtones and the incorporation of manipulated field recordings, white noise, and analog synth drones. This experimental project reflects upon the spontaneous nature of improvisation and the techniques used in noise music to craft intricate soundscapes.",
 		"image": "",
 		"videos": []
 	},{
-		"name": "Berlin Swamp Fest / Festival",
+		"name": "Berlin Swamp Fest",
 		"link": "https://www.swampconspiracy.org/",
 		"role": "Live sound Engineer ",
+		"type": "Event",
 		"timeframe": "2022",
 		"description": "I mixed a couple of bands during the two days of the festival.",
 		"image": "",
 		"videos": []
 	}, {
-		"name": "Abanamat / Band",
+		"name": "Abanamat",
 		"link": "",
-		"role": "Musician / Rhytmic Guitar / ",
+		"role": "Musician / Rhytmic Guitar ",
+		"type": "Band",
 		"timeframe": "2019 - 2022",
 		"description": "We started that project together like one day before covid started in Germany. During the time i was an active member, we wrote a couple of songs together for which some of them ended up as demos, others that also where recorded on the album. Besides playing i also mixed and mastered the demo songs for Djinn and Night Walk.",
 		"image": "",
@@ -38,9 +42,10 @@
 			}
 		]
 	},{
-		"name": "XIO – The magic of light live in your browser / Trailer",
+		"name": "XIO – The magic of light live in your browser",
 		"link": "",
 		"role": "Composer & Musician / Piano ",
+		"type": "Commercial trailer",
 		"timeframe": "2019",
 		"description": "",
 		"image": "",
@@ -50,9 +55,10 @@
 			}
 		]
 	}, {
-		"name": "Kosmonautensehnsucht / Film",
+		"name": "Kosmonautensehnsucht",
 		"link": "",
 		"role": "Production sound mixer / Boom operator",
+		"type": "Film",
 		"timeframe": "2016",
 		"description": "",
 		"image": "",
