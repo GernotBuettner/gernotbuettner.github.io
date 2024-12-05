@@ -1,9 +1,0 @@
-
-@function getLineHeight($type: base, $variant: '', $map: false) {
-	$map: if($map != false, $map, $fontSizes);
-	@if ($variant != '' and map-get(map-get(map-get(map-get($map, $type), variants), $variant), line-height)) {
-		@return map-get(map-get(map-get(map-get($map, $type), variants), $variant), line-height);
-	} @else {
-		@return map-get(map-get($map, $type), line-height);
-	}
-}
