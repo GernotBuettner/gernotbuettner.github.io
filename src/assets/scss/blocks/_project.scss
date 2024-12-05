@@ -6,7 +6,7 @@
 
 	&__headline {
 		@include font(subHeadline);
-		margin-top: $base6;
+		margin-top: $base5;
 
 		@include media($mediumLayout) {
 			margin-top: 0;
@@ -16,6 +16,14 @@
 	&--music &__headline {
 		@include headlineBar();
 		margin-top: 0;
+	}
+
+	&--music:first-child  &__headline{
+		border-top: 0;
+
+		@include media($mediumLayout) {
+			@include headlineBar();
+		}
 	}
 
 	&__link {
@@ -38,7 +46,7 @@
 	}
 
 	&--music &__meta {
-		margin-top: $base2;
+		margin-top: $base4;
 		display: flex;
 		justify-content: space-between;
 

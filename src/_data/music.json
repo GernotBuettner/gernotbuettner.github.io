@@ -2,7 +2,7 @@
 	{
 		"name": "MooN",
 		"link": "https://www.instagram.com/thebandcalledmoon/",
-		"role": "Musician / Rhytmic Guitar",
+		"role": "Rhytmic Guitar",
 		"type": "Band",
 		"timeframe": "2023 - current",
 		"description": "Moon is a heavy psych band playing groovy riffs and atmospheric improvisations. We are a two man band consisting of Drums and Guitar.",
@@ -28,8 +28,8 @@
 		"videos": []
 	}, {
 		"name": "Abanamat",
-		"link": "",
-		"role": "Musician / Rhytmic Guitar ",
+		"link": "https://linktr.ee/Abanamat",
+		"role": "Rhytmic Guitar ",
 		"type": "Band",
 		"timeframe": "2019 - 2022",
 		"description": "We started this project together one day before covid hit Germany. During the time i played rhythm guitar and, we wrote a many songs together. Besides playing i also mixed and mastered the demo songs for Djinn and Night Walk.",
@@ -43,15 +43,15 @@
 		]
 	},{
 		"name": "XIO",
-		"link": "",
+		"link": "https://vimeo.com/340436675",
 		"role": "Composer & Musician / Piano ",
 		"type": "Commercial trailer",
 		"timeframe": "2019",
-		"description": "Music for the commercial trailer.",
+		"description": "Music for a commercial trailer of the light configurator.",
 		"image": ""
 	}, {
 		"name": "Kosmonautensehnsucht",
-		"link": "",
+		"link": "https://www.imdb.com/title/tt10512636/",
 		"role": "Production sound mixer / Boom operator",
 		"type": "Film",
 		"timeframe": "2016",

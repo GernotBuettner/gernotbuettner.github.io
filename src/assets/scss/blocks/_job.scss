@@ -9,10 +9,9 @@
 	}
 
 	&__content {
-		margin-top: $base2;
+		margin-top: $base4;
 
 		@include media($mediumLayout) {
-			margin-top: $base4;
 			display: flex;
 			width: 100%;
 		}
@@ -53,7 +52,6 @@
 		text-decoration: none;
 		color: var(--base-color);
 		display: block;
-		border-top: 0;
 		padding-top: $base2 + $baseHalf;
 		padding-bottom: $base2 + $baseHalf;
 		position: sticky;
