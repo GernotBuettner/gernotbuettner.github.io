@@ -33,7 +33,7 @@
 		margin-top: $base2;
 
 		@include media($mediumLayout) {
-			margin-top: $base3;
+			margin-top: $base1 * 2.5;
 		}
 	}
 

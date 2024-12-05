@@ -5,7 +5,16 @@
 		"role": "Rhytmic Guitar",
 		"type": "Band",
 		"timeframe": "2023 - current",
-		"description": "Moon is a heavy psych band playing groovy riffs and atmospheric improvisations. We are a two man band consisting of Drums and Guitar.",
+		"description": "Moon is a heavy psych band playing groovy riffs and atmospheric improvisations. It was born out of the collaboration with Stephan Berger on drums and continues to amaze.",
+		"image": "",
+		"videos": []
+	}, {
+		"name": "BDO",
+		"link": "https://www.mixcloud.com/Berlin_Diaphonic_Orchestra/",
+		"role": "Producer",
+		"type": "Radio show",
+		"timeframe": "2024 - current",
+		"description": "BDO or Berlin Diaphonic Orchestra is a radio show that is always release on the 20th of the month, featuring modern classic, musique concrete and ambient tracks.",
 		"image": "",
 		"videos": []
 	}, {
@@ -17,7 +26,7 @@
 		"description": "Ailamfa is a musical journey through unfamiliar sonic territory, featuring the use of feedback loops to generate intricate overtones and the incorporation of manipulated field recordings, white noise, and analog synth drones. This experimental project reflects upon the spontaneous nature of improvisation and the techniques used in noise music to craft intricate soundscapes.",
 		"image": "",
 		"videos": []
-	},{
+	}, {
 		"name": "Berlin Swamp Fest",
 		"link": "https://www.swampconspiracy.org/",
 		"role": "Live sound Engineer ",

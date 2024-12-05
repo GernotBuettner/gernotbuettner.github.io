@@ -11,7 +11,7 @@
 					<p class="job__detail">{{ job.role }}</p>
 					<p class="job__detail">{{ job.timeframe }}</p>
 				</div>
-				<p class="job__description">{{ job.description | safe }}</p>
+				<div class="job__description ugc">{{ job.description | safe }}</div>
 			</div>
 			<div class="job__column">
 				{% for project in job.projects %}
