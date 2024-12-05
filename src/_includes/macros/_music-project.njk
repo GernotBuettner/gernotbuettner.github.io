@@ -19,7 +19,11 @@
 		{% endif %}
 
 		{% if music_project.videos %}
-			{# TODO: Youtube/Vimeo Embed #}
+			{% for video in music_project.videos %}
+				<div class="project__video">
+					<iframe src="https://www.youtube.com/embed/{{ video.id }}"></iframe>
+				</div>
+			{% endfor %}
 		{% endif %}
 	</div>
 {% endmacro %}
