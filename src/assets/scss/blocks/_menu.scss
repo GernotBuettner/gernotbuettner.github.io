@@ -1,0 +1,89 @@
+.menu {
+	@include ease(transform, 0.4s);
+	bottom: 0;
+	display: flex;
+	justify-content: flex-end;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $layoutMaxWidht;
+	pointer-events: none;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: $menuIndex;
+	transform: translateX(100%);
+
+	@include media($mediumLayout) {
+		padding-left: $layoutMarginGapDesktop;
+		padding-right: $layoutMarginGapDesktop;
+	}
+
+	&.js-menu-opened {
+		transform: translateX(0);
+	}
+
+	&__content {
+		background-color: var(--base-background-color-inverted);
+		position: relative;
+		pointer-events: all;
+		width: staticColumnSize(12, 12, $gapSmall, -$gapSmall);
+
+		@include media($mediumLayout) {
+			height: 100%;
+			width: staticColumnSize(8, 12, $gapSmall, -$gapSmall);
+
+			&::after {
+				background-color: var(--base-background-color-inverted);
+				bottom: 0;
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 0;
+				transform: translateX(calc(100% - pxToRem(1))); // 1px compensation for menu gap
+				width: 100%;
+			}
+		}
+	}
+
+	&__list {
+		padding-top: $base1 * 20;
+		padding-left: $layoutMarginGapMobile;
+		padding-right: $layoutMarginGapMobile;
+
+		@include media($mediumLayout) {
+			padding-left: staticColumnSize(1, 8, $gapSmall);
+		}
+	}
+
+	&__item {
+		color: var(--base-color-inverted);
+		border-top: solid 1px var(--border-color);
+		position: relative;
+
+		&:last-of-type {
+			border-bottom: solid 1px var(--border-color);
+		}
+	}
+
+	&__link {
+		display: block;
+		padding-top: $base2 + $baseHalf;
+		padding-bottom: $base2 + $baseHalf;
+		text-decoration: none;
+		text-align: right;
+		width: 100%;
+
+		@include media($mediumLayout) {
+			padding-top: $base2;
+			padding-bottom: $base2;
+		}
+	}
+
+	&__text {
+		@include arrowIcon(left, --base-color-inverted);
+		@include font(menuItem);
+		display: block;
+		pointer-events: none;
+	}
+}

@@ -1,0 +1,25 @@
+$fontFamilyMain: 'Neue Machina', serif;
+
+@font-face {
+	font-family: 'Neue Machina';
+	src:
+		url('/assets/fonts/pp-neue-machina-plain-light.otf') format('opentype');
+	font-style: normal;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Neue Machina';
+	src:
+		url('/assets/fonts/pp-neue-machina-plain-regular.otf') format('opentype');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Neue Machina';
+	src:
+		url('/assets/fonts/pp-neue-machina-plain-ultra-bold.otf') format('opentype');
+	font-style: normal;
+	font-weight: 800;
+}

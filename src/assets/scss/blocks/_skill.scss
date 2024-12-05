@@ -1,0 +1,59 @@
+.skill {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border: solid 1px  var(--border-color);
+	padding: $base1;
+	overflow: hidden;
+
+	&:nth-child(4n) {
+		margin-right: 0;
+	}
+
+	& + & {
+		margin-top: $base2;
+
+		@include media($mediumLayout) {
+			margin-top: 0;
+		}
+	}
+
+	&::after {
+		display: none;
+
+		@include media($mediumLayout) {
+			content: '';
+			display: block;
+			pointer-events: none;
+			position: absolute;
+			background: radial-gradient(circle, rgb(35, 35, 35), transparent 70%);
+			left: var(--x);
+			top: var(--y);
+			width: 400px;
+			height: 400px;
+			transform: translate(-50%, -50%);
+			z-index: $skillGradientIndex;
+		}
+	}
+
+
+	&__items {
+		flex-grow: 1;
+		pointer-events: none;
+		z-index: $skillTextIndex;
+	}
+
+	&__item + &__item {
+		margin-top: calc($baseHalf / 2);
+	}
+
+	&__text {
+		@include font(base);
+	}
+
+	&__category {
+		@include font(subHeadline);
+		margin-top: $base2;
+		pointer-events: none;
+	}
+}

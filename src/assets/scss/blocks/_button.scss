@@ -1,0 +1,36 @@
+.button {
+	&--mode {
+		filter: blur($baseHalf);
+		width: $base2;
+		height: $base2;
+		border-radius: 50%;
+		background-color: var(--base-color);
+		margin-right: $base4;
+	}
+
+	&--menu {
+		position: relative;
+		width: $base3;
+		height: $base4;
+
+		&::after {
+			content: '';
+			background-color: var(--base-color);
+			width: 100%;
+			height: $menuBarHeight;
+			position: absolute;
+			top: $base1 + $baseHalf;
+			left: 0;
+		}
+
+		&::before {
+			content: '';
+			background-color: var(--base-color);
+			width: 100%;
+			height: $menuBarHeight;
+			position: absolute;
+			bottom: $base1 + $baseHalf;
+			left: 0;
+		}
+	}
+}

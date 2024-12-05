@@ -1,0 +1,61 @@
+.main {
+	max-width: $layoutMaxWidht;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+
+	&__animation {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: $baseIndex;
+		overflow: hidden;
+	}
+
+	&__content {
+		padding-left: $layoutMarginGapMobile;
+		padding-right: $layoutMarginGapMobile;
+
+		@include media($mediumLayout) {
+			padding-left: $layoutMarginGapDesktop;
+			padding-right: $layoutMarginGapDesktop;
+		}
+	}
+
+	&__intro {
+		padding-bottom: $base4;
+		height: 100vh;
+		position: relative;
+	}
+
+	&__filter {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	&__headline {
+		position: relative;
+		z-index: $mainHeadlineIndex;
+		padding-left: $layoutMarginGapMobile;
+
+		@include media($mediumLayout) {
+			padding-left: $layoutMarginGapDesktop;
+		}
+
+
+		&--name {
+			@include font(teaserHeadline);
+			margin-bottom: $base2;
+			padding-top: $base2;
+			white-space: nowrap;
+		}
+
+		&--title {
+			@include font(headlineHighlighted);
+		}
+	}
+}

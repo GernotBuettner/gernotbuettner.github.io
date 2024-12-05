@@ -1,0 +1,23 @@
+$breakpoints: (
+	xxSmall: 320px,
+	xSmall: 504px,
+	containerMaxWidthSmall: 740px,
+	small: 768px,
+	medium: 1024px,
+	large: 1200px,
+	galleryArrows: 1350px,
+	xLarge: 1366px
+);
+
+$media-expressions: (
+	screen: 'screen',
+	print: 'print',
+	handheld: 'handheld',
+	landscape: '(orientation: landscape)',
+	portrait: '(orientation: portrait)'
+);
+
+
+$smallLayout: '>=small';
+$mediumLayout: '>=medium';
+$largeLayout: '>=xLarge';

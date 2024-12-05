@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: "Gernot Büttner Web Development & Music"
+---
+
+{% from 'macros/_job.njk' import jobComponent %}
+{% from 'macros/_skill.njk' import skillComponent %}
+{% from 'macros/_music-project.njk' import musicProjectComponent %}
+
+{% block content %}
+	<section class="section section--column section--experiences" id="experiences">
+		<h2 class="section__title">Experiences</h2>
+		<div class="section__content">
+			{% for job in jobs %}
+				{{ jobComponent( job ) }}
+			{% endfor %}
+
+		</div>
+	</section>
+
+	<section class="section section--skills" id="skills">
+		<h2 class="section__title">Skills</h2>
+		<div class="section__content">
+			<div class="skills">
+				{% for skill in skills %}
+					{{ skillComponent( skill ) }}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	<section class="section section--column section--music" id="music">
+		<h2 class="section__title">Music</h2>
+		<div class="section__content">
+			{{ music_project }}
+			{% for music_project in music %}
+				{{ musicProjectComponent( music_project ) }}
+			{% endfor %}
+		</div>
+	</section>
+
+{% endblock %}

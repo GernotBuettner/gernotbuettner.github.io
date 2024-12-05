@@ -1,0 +1,32 @@
+@mixin mailIcon($color: --base-color) {
+	position: relative;
+	display: block;
+	border: solid var($color) pxToRem(3);
+	width: $base5;
+	height: $base3;
+
+	&::after {
+		content: '';
+		background: var($color);
+		width: $base1 * 2.5;
+		height: pxToRem(3);
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform-origin: left top;
+		transform: rotate(25deg);
+
+	}
+
+	&::before {
+		content: '';
+		background: var($color);
+		width: $base1 * 2.5;
+		height: pxToRem(3);
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform-origin: right top;
+		transform: rotate(-25deg);
+	}
+}

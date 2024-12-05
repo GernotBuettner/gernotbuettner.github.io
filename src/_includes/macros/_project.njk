@@ -1,0 +1,12 @@
+{% macro projectComponent( project ) %}
+	<div class="project">
+		{% if project.link %}
+			<a class="project__link" href="{{ project.link }}">
+		{% endif %}
+			<h4 class="project__headline">{{ project.name }}</h4>
+		{% if project.link %}
+			</a>
+		{% endif %}
+		<div class="project__text ugc">{{ project.description | safe }}</div>
+	</div>
+{% endmacro %}

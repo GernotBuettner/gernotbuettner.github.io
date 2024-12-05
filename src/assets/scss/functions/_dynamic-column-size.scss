@@ -1,0 +1,11 @@
+@use "sass:math";
+// refer to _dynamic-columns.scss for documentation
+
+// $size is the width in number of columns
+// $total is the max number of columns supported by the grid
+// $hSpace is the gutter
+@function dynamicColumnSize($size, $total, $hSpace, $extra: '0px') {
+	// width: calc(#{100% / $cols * $size} - #{$hSpace * $size} + #{$hSpace * ($size - 1)});
+	// width: calc(#{100% / $cols * $size} - #{$hSpace});
+	@return if($hSpace != 0, calc(#{100% * math.div($size, $total)} - #{$hSpace} + #{$extra}), calc(#{100% * math.div($size, $total)} + #{$extra}));
+}

@@ -1,0 +1,8 @@
+@function getFontSize($type: base, $variant: '', $map: false) {
+	$map: if($map != false, $map, $fontSizes);
+	@if ($variant != '') {
+		@return map-get(map-get(map-get(map-get($map, $type), variants), $variant), font-size);
+	} @else {
+		@return map-get(map-get($map, $type), font-size);
+	}
+}

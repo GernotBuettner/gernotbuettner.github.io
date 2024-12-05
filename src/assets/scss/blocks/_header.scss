@@ -1,0 +1,30 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: $headerTopSpacingMobile;
+	left: $layoutMarginGapMobile;
+	right: $layoutMarginGapMobile;
+	mix-blend-mode: difference;
+	z-index: $headerIndex;
+
+	@include media($mediumLayout) {
+		left: $layoutMarginGapDesktop - $base2;
+		right: $layoutMarginGapDesktop - $base2;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		margin-bottom: $base1;
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		width: 100%;
+		mix-blend-mode: difference;
+	}
+}

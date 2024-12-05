@@ -1,0 +1,26 @@
+[
+	{
+		"category": "Code",
+		"items": ["Javascript", "Typescript", "PHP", "Python", "HTML & CSS", "XML"]
+	},
+	{
+		"category": "Technologies",
+		"items": ["Angular", "React", "React Redux", "11ty", "MySQL", "PostgreSQL", "Sass/Scss", "GSAP", "Git", "Node/NPM", "Webpack"]
+	},
+	{
+		"category": "OS",
+		"items": ["Linux Fedora", "Linux Ubuntu", "OSX"]
+	},
+	{
+		"category": "Tools",
+		"items": ["Github", "Kirby CMS", "Django CMS", "Browserstack", "Patternlab", "Storybook", "Zendesk", "Emarsys", "Matomo"]
+	},
+	{
+		"category": "Processes",
+		"items": ["TDD/Unit Testing", "Pull requests/Code Reviews", "RFC", "Agile Sprint Cycles"]
+	},
+	{
+		"category": "Languages",
+		"items": ["German (nativ)", "English (professional)", "French (intermediate)"]
+	}
+]
