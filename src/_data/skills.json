@@ -9,7 +9,7 @@
 	},
 	{
 		"category": "OS",
-		"items": ["Linux Fedora", "Linux Ubuntu", "OSX"]
+		"items": ["Linux Fedora", "Linux Ubuntu", "Unix Systems", "Windows Systems"]
 	},
 	{
 		"category": "Tools",
