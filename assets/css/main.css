@@ -217,6 +217,7 @@ a {
   --base-background-color: #000000;
   --base-background-color-inverted: #e3f0f0;
   --base-color: #e3f0f0;
+  --base-color-inverted: #000000;
   --base-text-color: #bdbebe;
   --border-color: #817e7e;
 }
@@ -225,6 +226,7 @@ a {
   --base-background-color: #e3f0f0;
   --base-background-color-inverted: #000000;
   --base-color: #000000;
+  --base-color-inverted: #e3f0f0;
   --base-text-color: #262626;
   --border-color: #817e7e;
 }
@@ -737,6 +739,7 @@ a {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.2;
+  color: var(--base-color-inverted);
   display: block;
   pointer-events: none;
 }
