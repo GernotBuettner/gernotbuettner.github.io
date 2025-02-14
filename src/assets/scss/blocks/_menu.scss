@@ -83,6 +83,7 @@
 	&__text {
 		@include arrowIcon(left, --base-color-inverted);
 		@include font(menuItem);
+		color: var(--base-color-inverted);
 		display: block;
 		pointer-events: none;
 	}
