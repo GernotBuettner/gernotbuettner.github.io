@@ -25,7 +25,13 @@
 		"timeframe": "2021 - current",
 		"description": "Ailamfa is a musical journey through unfamiliar sonic territory, featuring the use of feedback loops to generate intricate overtones and the incorporation of manipulated field recordings, white noise, and analog synth drones. This experimental project reflects upon the spontaneous nature of improvisation and the techniques used in noise music to craft intricate soundscapes.",
 		"image": "",
-		"videos": []
+		"videos": [
+			{
+				"id": "P7qOT0UyECo"
+			}, {
+				"id": "K-BvAwxBokE"
+			}
+		]
 	}, {
 		"name": "Berlin Swamp Fest",
 		"link": "https://www.swampconspiracy.org/",
