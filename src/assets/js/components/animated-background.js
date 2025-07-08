@@ -43,7 +43,10 @@ export default class AnimatedBackgroundComponent {
 			this.animate();
 		}
 
-		window.addEventListener('scroll', this.onScroll.bind(this))
+		window.addEventListener('scroll', this.onScroll.bind(this));
+		
+		// Cleanup on page hide
+        window.addEventListener('pagehide', this.destroy.bind(this));
 	}
 
 	onWindowResize() {
@@ -103,6 +106,12 @@ export default class AnimatedBackgroundComponent {
 			u_time: { type: 'f', value: 0.0 },
 		}
 
+		this.createMaterial();
+		this.scene.add( this.mesh );
+		this.createRenderer();
+	}
+
+	createMaterial() {
 		const material = new THREE.ShaderMaterial({
 			wireframe: true,
 			uniforms: this.uniforms,
@@ -112,9 +121,9 @@ export default class AnimatedBackgroundComponent {
 
 		this.geometry = new THREE.IcosahedronGeometry( 4, 20 );
 		this.mesh = new THREE.Mesh( this.geometry, material )
+	}
 
-		this.scene.add( this.mesh );
-
+	createRenderer() {
 		this.renderer = new THREE.WebGLRenderer( { antialias: true } );
 		this.renderer.outputColorSpace = THREE.SRGBColorSpace;
 		this.renderer.setPixelRatio( window.devicePixelRatio );
@@ -146,7 +155,10 @@ export default class AnimatedBackgroundComponent {
 
 	stopAnimation() {
 		this.isAnimating = false;
-		window.cancelAnimationFrame(this.requestAnimationID);
+
+		if (this.requestAnimationID) {
+			window.cancelAnimationFrame(this.requestAnimationID);
+		}
 	}
 
 	render() {
@@ -168,5 +180,25 @@ export default class AnimatedBackgroundComponent {
 		} else {
 			this.renderer.render(this.scene, this.camera);
 		}
+	}
+
+	destroy() {
+		console.log('Destroying AnimatedBackgroundComponent');
+		debugger;
+		window.removeEventListener('resize', this.onWindowResize.bind(this));
+		window.removeEventListener('scroll', this.onScroll.bind(this));
+
+		if (this.mesh) {
+			this.geometry.dispose();
+			this.mesh.material.dispose();
+			this.scene.remove(this.mesh);
+		}
+		if (this.renderer) {
+			this.renderer.dispose();
+			if (this.renderer.domElement.parentNode) {
+				this.renderer.domElement.parentNode.removeChild(this.renderer.domElement);
+			}
+		}
+		this.stopAnimation();
 	}
 }
