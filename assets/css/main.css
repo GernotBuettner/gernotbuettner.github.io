@@ -829,7 +829,7 @@ a {
 }
 .project__link {
   color: var(--base-color);
-  display: block;
+  display: flex;
 }
 .project--music .project__link {
   text-decoration: none;
@@ -854,6 +854,20 @@ a {
   right: 0.18rem;
   transform-origin: right bottom;
   transform: rotate(45deg);
+}
+.project__techstack {
+  font-family: Neue Machina, serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--base-text-color);
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .project__techstack {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
 }
 .project__text {
   margin-top: 2rem;
