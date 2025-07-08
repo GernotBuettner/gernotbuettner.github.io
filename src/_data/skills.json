@@ -5,19 +5,19 @@
 	},
 	{
 		"category": "Technologies",
-		"items": ["Angular", "React", "React Redux", "11ty", "MySQL", "PostgreSQL", "Sass/Scss", "GSAP", "Git", "Node/NPM", "Webpack"]
-	},
-	{
-		"category": "OS",
-		"items": ["Linux Fedora", "Linux Ubuntu", "Unix Systems", "Windows Systems"]
+		"items": ["Angular", "React", "React Redux", "11ty", "MySQL", "PostgreSQL", "Sass/Scss", "GSAP", "Chart.js / Three.js", "Git", "Node / NPM / Webpack"]
 	},
 	{
 		"category": "Tools",
 		"items": ["Github", "Kirby CMS", "Django CMS", "Browserstack", "Patternlab", "Storybook", "Zendesk", "Emarsys", "Matomo"]
 	},
 	{
+		"category": "OS",
+		"items": ["Linux Systems", "Unix Systems", "Windows Systems"]
+	},
+	{
 		"category": "Processes",
-		"items": ["TDD/Unit Testing", "Pull requests/Code Reviews", "RFC", "Agile Sprint Cycles"]
+		"items": ["TDD/Unit Testing", "Pull requests/Code Reviews", "RFC", "Agile Methodes (Scrum, Kanban)", "CI/CD", "Accessibility (WCAG 2.1)"]
 	},
 	{
 		"category": "Languages",
