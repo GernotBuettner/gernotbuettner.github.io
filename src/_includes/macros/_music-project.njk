@@ -2,7 +2,7 @@
 	<div class="project project--music">
 		<div class="project__headline">
 			{% if music_project.link %}
-				<a class="project__link" href="{{ music_project.link }}">
+				<a class="project__link" href="{{ music_project.link }}" target="_blank" rel="noopener noreferrer">
 			{% endif %}
 				<h4 class="project__headline-text">{{ music_project.name }}</h4>
 			{% if music_project.link %}

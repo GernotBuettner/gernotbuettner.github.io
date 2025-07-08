@@ -28,12 +28,18 @@
 
 	&__link {
 		@include link();
-		display: block;
+		display: flex;
 	}
 
 	&--music &__link {
 		text-decoration: none;
 		@include arrowIcon();
+	}
+
+	&__techstack {
+		@include font(detail);
+		color: var(--base-text-color);
+		margin-top: $base1;
 	}
 
 	&__text {
