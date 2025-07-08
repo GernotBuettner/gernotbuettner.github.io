@@ -1,9 +1,9 @@
 {% macro projectComponent( project ) %}
 	<div class="project">
 		{% if project.link %}
-			<a class="project__link" href="{{ project.link }}">
+			<a class="project__link" href="{{ project.link }}" target="_blank" rel="noopener noreferrer">
 		{% endif %}
-			<h4 class="project__headline">{{ project.name }}</h4>
+			<h4 class="project__headline">{{ project.name | safe }}</h4>
 		{% if project.link %}
 			</a>
 		{% endif %}

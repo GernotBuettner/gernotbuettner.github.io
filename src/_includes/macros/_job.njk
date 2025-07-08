@@ -2,7 +2,12 @@
 
 {% macro jobComponent( job ) %}
 	<div class="job">
-		<a class="job__link" href="{{ job.link }}">
+		<a class="job__link" href="{{ job.link }}" target="_blank" rel="noopener noreferrer">
+			{% if job.logo %}
+				<img class="job__logo" src="{{ job.logo }}" alt="{{ job.company }} logo">
+			{% else %}
+				<div class="job__logo-placeholder">{{ job.company | slice(0, 1) }}</div>
+			{% endif %}
 			<h3 class="job__headline">{{ job.company }}</h3>
 		</a>
 		<div class="job__content">
