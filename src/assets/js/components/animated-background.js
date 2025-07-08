@@ -183,8 +183,6 @@ export default class AnimatedBackgroundComponent {
 	}
 
 	destroy() {
-		console.log('Destroying AnimatedBackgroundComponent');
-		debugger;
 		window.removeEventListener('resize', this.onWindowResize.bind(this));
 		window.removeEventListener('scroll', this.onScroll.bind(this));
 
