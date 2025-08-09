@@ -1,13 +1,17 @@
 [
 	{
-		"name": "MooN",
-		"link": "https://linktr.ee/moon_band",
+		"name": "MooNexus",
+		"link": "https://linktr.ee/moonexus",
 		"role": "Rhytmic Guitar",
 		"type": "Band",
 		"timeframe": "2023 - current",
-		"description": "<p>Formed in 2023 in the valleys at the foot of the Alps, MooN is a two-man band that combines heavy rock with psychedelic influences. With their groovy riffs, atmospheric melodies and dynamic breakbeat rhythms, their music balances intensity with a sense of exploration.</p><p>With its blend of heavy and psychedelic moments, MooN creates a distinctive take on modern rock, rooted in strong rhythms and mindful melodies. Their musical storytelling is taking listeners on a journey through moods and textures inspired by the nature that surrounds them.</p>",
+		"description": "<p>Formed in 2023 in the valleys at the foot of the Alps, MooNexus is a two-man band that combines heavy rock with psychedelic influences. With their groovy riffs, atmospheric melodies and dynamic breakbeat rhythms, their music balances intensity with a sense of exploration.</p><p>With its blend of heavy and psychedelic moments, MooNexus creates a distinctive take on modern rock, rooted in strong rhythms and mindful melodies. Their musical storytelling is taking listeners on a journey through moods and textures inspired by the nature that surrounds them.</p>",
 		"image": "",
-		"videos": []
+		"videos": [
+			{
+				"id": "rBaToipaX3Q"
+			}
+		]
 	}, {
 		"name": "BDO",
 		"link": "https://www.mixcloud.com/Berlin_Diaphonic_Orchestra/",
