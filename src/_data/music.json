@@ -1,8 +1,15 @@
 [
 	{
+		"name": "Fior di tomba",
+		"link": "https://renauvincent.bandcamp.com/album/fior-di-tomba",
+		"role": "Studio Sound Engineer",
+		"type": "Album",
+		"timeframe": "2026",
+		"description": "<p>Fior di tomba is inspired by traditional Italian songs and anti-fascist protest songs to create a dialogue between the past and the present. Renaud Vincent calls upon these female voices, summoning these ghosts to accompany us today. This album follows on from a collaboration with Florianne Facchini & Cie on the show La Pastasciutta Antifascista by Casa Cervi.</p>"
+	}, {
 		"name": "MooNexus",
 		"link": "https://linktr.ee/moonexus",
-		"role": "Rhytmic Guitar",
+		"role": "Rhytmic Guitar, Studio Sound Engineer",
 		"type": "Band",
 		"timeframe": "2023 - current",
 		"description": "<p>Formed in 2023 in the valleys at the foot of the Alps, MooNexus is a two-man band that combines heavy rock with psychedelic influences. With their groovy riffs, atmospheric melodies and dynamic breakbeat rhythms, their music balances intensity with a sense of exploration.</p><p>With its blend of heavy and psychedelic moments, MooNexus creates a distinctive take on modern rock, rooted in strong rhythms and mindful melodies. Their musical storytelling is taking listeners on a journey through moods and textures inspired by the nature that surrounds them.</p>",
@@ -28,18 +35,11 @@
 		"type": "Band",
 		"timeframe": "2021 - current",
 		"description": "Ailamfa is a musical journey through unfamiliar sonic territory, featuring the use of feedback loops to generate intricate overtones and the incorporation of manipulated field recordings, white noise, and analog synth drones. This experimental project reflects upon the spontaneous nature of improvisation and the techniques used in noise music to craft intricate soundscapes.",
-		"image": "",
-		"videos": [
-			{
-				"id": "P7qOT0UyECo"
-			}, {
-				"id": "K-BvAwxBokE"
-			}
-		]
+		"image": ""
 	}, {
 		"name": "Berlin Swamp Fest",
 		"link": "https://www.swampconspiracy.org/",
-		"role": "Live sound Engineer ",
+		"role": "Live sound engineer ",
 		"type": "Event",
 		"timeframe": "2022",
 		"description": "During the 2022 edition of the festival, i worked as a live sound egineer mixing a several bands in Zukunft am Ostkeuz.",
@@ -48,7 +48,7 @@
 	}, {
 		"name": "Abanamat",
 		"link": "https://linktr.ee/Abanamat",
-		"role": "Rhytmic Guitar ",
+		"role": "Rhytmic Guitar, Studio sound engineer",
 		"type": "Band",
 		"timeframe": "2019 - 2022",
 		"description": "We started this project together one day before covid hit Germany. During the time i played rhythm guitar and, we wrote a many songs together. Besides playing i also mixed and mastered the demo songs for Djinn and Night Walk.",
